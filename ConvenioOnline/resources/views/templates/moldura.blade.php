@@ -5,7 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>UESPI - Universidade Estadual do Piauí</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
 </head>
 <body>
    <div class="container">
@@ -23,7 +24,22 @@
            @yield('content')
            
            <!-- End -->
+
+           <footer>
+		    <div class="footer" >
+		      <!-- <div class="borda"></div> -->
+                <h6 align="center">NPD - Núcleo de Processamento de dados. <br/> 
+                Em caso de problemas entre em contato pelo Email fullstackof@gmail.com<br/> 
+                lembrando sempre de informar seu usuário.<br />
+                © 2019 Universidade Estadual do Piauí - UESPI. Todos os direitos reservados.
+                </h6>		    
+            </div>
+		</footer>
+
        </div>
+
+        
+
    </div>
 </body>
 </html>

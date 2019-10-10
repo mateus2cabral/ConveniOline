@@ -33,6 +33,11 @@ body {
 
 .all-white {
     margin-top: 100px;
-    background-color: white;
+    background-color: #fffeee;
     height: 500px;
+    padding-top: 20px; 
+}
+
+.footer {
+    margin-top: 70px; 
 }
