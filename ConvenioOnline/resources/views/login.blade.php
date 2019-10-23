@@ -17,8 +17,10 @@
         </div>
     </form>
     <div class="form-buttons">
-        <button type="submit" >Entrar</button>
+        
+        <a href="inicio"><button type="submit">Entrar</button></a>
     </div>
 </div>
 
 @endsection
+

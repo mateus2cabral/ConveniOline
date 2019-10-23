@@ -16,4 +16,10 @@ class ConvenioController extends Controller
     public function logado_formulario () {
         return view('logadoForm');
     }
+    public function inicio () {
+        return view('inicio');
+    }
+    public function solicitacao_formulario () {
+        return view('solicitacao');
+    }
 }

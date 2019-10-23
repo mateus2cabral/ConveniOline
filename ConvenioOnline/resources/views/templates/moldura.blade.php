@@ -29,10 +29,11 @@
 		    <div class="footer" >
 		      <!-- <div class="borda"></div> -->
                 <h6 align="center">NPD - Núcleo de Processamento de dados. <br/> 
-                Em caso de problemas entre em contato pelo Email fullstackof@gmail.com<br/> 
+                Em caso de problemas entre em contato pelo E-mail fullstackof@gmail.com<br/> 
                 lembrando sempre de informar seu usuário.<br />
                 © 2019 Universidade Estadual do Piauí - UESPI. Todos os direitos reservados.
-                </h6>		    
+                </h6>		  
+                <p></p>  
             </div>
 		</footer>
 
