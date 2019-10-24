@@ -10,11 +10,15 @@ class ConvenioController extends Controller
         return view('login');
     }
 
-    public function logado_inicio () {
-        return view('logadoInicio');
+    public function inicio () {
+        return view('inicio');
     }
-    public function logado_formulario () {
-        return view('logadoForm');
+
+    public function convenio_solicitacao () {
+        return view('convenio_solicitacao');
     }
+
+    
+
    
 }

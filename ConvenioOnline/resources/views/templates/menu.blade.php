@@ -13,18 +13,29 @@
    <div class="container">
        <header class="h-eader">
            <div class="logo">
-           <a href="https://www.uespi.br/site/"><img src="image/logo-uespi.png" width="208" height="80"></a>
-           </div>
+               <a href="https://www.uespi.br/site/"> <img src="image/logo-uespi.png" width="208" height="80"></a>
+               </div>
            <div class="title">
                ConvênioOnline
            </div>
        </header>
-       <div class="all-white">
            <!-- Faça aqui seu codigo -->
            
-           @yield('content')
-           
-           <!-- End -->
+       <div class="all-white">
+           <div class="menu-bar">
+                <div class="inner-menu-bar">
+                    <ul>
+                        <a href="inicio"><li>Início</li></a>
+                        <a href="solicitacao"><li>Convênio</li></a>
+                        <a href="login"><li class="exit">Sair</li></a>
+                    </ul>       
+            </div>
+        </div>
+        <div class="all-white-menu">
+            @yield('content')
+        </div>
+
+
 
            <footer>
 		    <div class="footer" >
@@ -45,3 +56,5 @@
    </div>
 </body>
 </html>
+
+

@@ -1,4 +1,4 @@
-@extends('templates.moldura')
+@extends('templates.menu')
 
 @section('content')
 
