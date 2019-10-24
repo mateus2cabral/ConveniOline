@@ -18,19 +18,9 @@ Route::get('/', function () {
 // Rota para o controller "ConvenioControlller" na função login
 Route::get('/login', 'ConvenioController@login');
 
-// Rota para o controller "ConvenioControlller" na função logado_inicio
-Route::get('/formulario', 'ConvenioController@logado_inicio');
-
 // Rota para o controller "ConvenioControlller" na função logado_formulario
 Route::get('/formulario', 'ConvenioController@logado_formulario');
 
-
-
-
-
-// Rota para o controller "ConvenioControlller" na função solicitacao_formulario
-Route::get('/solicitacao', 'ConvenioController@solicitacao_formulario');
-
 // Rota para o controller "ConvenioControlller" na função inicio
-Route::get('/inicio', 'ConvenioController@inicio');
+Route::get('/inicio', 'ConvenioController@logado_inicio');
 
