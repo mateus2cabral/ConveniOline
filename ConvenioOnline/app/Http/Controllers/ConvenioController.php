@@ -26,6 +26,19 @@ class ConvenioController extends Controller
         return view('detalhe_solicitacao');
     }
 
+
+
+    public function store(Request $request)
+    {
+        $name = $request->input('usuario');
+        if ($name == "test") {
+            return view('detalhe_solicitacao');
+            # code...
+        }
+
+        //
+    }
+
     
 
     

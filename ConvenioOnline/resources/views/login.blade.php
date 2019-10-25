@@ -6,8 +6,8 @@
     <div class="form-title">Efetue login</div>
     <form class="form-fields">
         <div class="user-field">
-            <div class="left-side">Usuário:</div> 
-            <div class="right-side"><input autofocus></div>
+            <div class="left-side" >Usuário:</div> 
+            <div  class="right-side"><input name='usuario' autofocus></div>
         </div>
         <div class="password-field">
             <div class="left-side">Senha:</div> 
