@@ -2,12 +2,7 @@
 
 @section('content')
 
-
-
-
-
 <div class="solicitacao">
-
 
     <div class="form-title-solicitacao">Solicitação de Convênio</div>
     <div class="form-solicitacao">
@@ -15,7 +10,6 @@
         <div class="form-fields-solicitacao"></div>
 
         <form>
-
             
             <div>
                 <div class="left-side">Representante:</div> 
@@ -50,14 +44,11 @@
             
             
         <div class="button-solicitacao">
-            <a href="login"><button type="submit">Solicitar</button></a>
+            <a href="/"><button type="submit">Solicitar</button></a>
         </div>
-        
-    
         
     </div>
 
-    
 </div>
         
 @endsection

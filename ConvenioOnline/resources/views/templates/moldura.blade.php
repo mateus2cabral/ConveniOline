@@ -15,9 +15,11 @@
            <div class="logo">
            <a href="https://www.uespi.br/site/"><img src="image/logo-uespi.png" width="208" height="80"></a>
            </div>
+           <a href="/">
            <div class="title">
                ConvênioOnline
            </div>
+           </a>
        </header>
        <div class="all-white">
            <!-- Faça aqui seu codigo -->

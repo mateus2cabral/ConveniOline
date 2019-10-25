@@ -2,8 +2,6 @@
 
 @section('content')
 
-<!-- <div class="form"></div> -->
-
 <div class="form">
     <div class="form-title">Efetue login</div>
     <form class="form-fields">
@@ -18,7 +16,7 @@
     </form>
     <div class="form-buttons">
         
-        <a href="inicio"><button type="submit">Entrar</button></a>
+        <a href="/inicio"><button type="submit">Entrar</button></a>
     </div>
 </div>
 

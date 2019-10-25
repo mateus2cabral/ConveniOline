@@ -1,14 +1,12 @@
 .menu-bar {
     width: 100%;
     height: 30px;
-    /* background-color: gray; */
 }
 
 .inner-menu-bar {
     margin: auto;
     width: 1080px;
     height: 30px;
-    /* background-color: red;  */
     border-bottom: 1px solid #aaa;
 }
 
@@ -18,7 +16,6 @@
     padding-top: 5px;
     text-decoration: none;
     color: #777;
-    
 }
 
 .inner-menu-bar ul li:hover{
@@ -38,8 +35,6 @@
     height: 330px;
     margin: auto;
     margin-top: 10px;
-    /* background-color: aqua; */
-    /* padding-top: 230px; */
 }
 
 .feed-msg {
@@ -53,5 +48,3 @@
     margin-left: 25%;
     margin-right: 25%;
 }
-
-

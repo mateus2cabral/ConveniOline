@@ -18,6 +18,16 @@ class ConvenioController extends Controller
         return view('convenio_solicitacao');
     }
 
+    public function visualizar_solicitacao () {
+        return view('visualizar_solicitacao_preg');
+    }
+
+    public function detalhe_solicitacao () {
+        return view('detalhe_solicitacao');
+    }
+
+    
+
     
 
    
