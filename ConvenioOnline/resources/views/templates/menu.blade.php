@@ -18,7 +18,7 @@
            <div class="logo">
                <a href="https://www.uespi.br/site/"> <img src="image/logo-uespi.png" width="208" height="80"></a>
                </div>
-            <a href="/inicio">
+            <a href="inicio">
            <div class="title">
                ConvênioOnline
            </div>
@@ -30,10 +30,10 @@
            <div class="menu-bar">
                 <div class="inner-menu-bar">
                     <ul>
-                        <a href="/inicio"><li>Início</li></a>
-                        <a href="/solicitacao"><li>Convênio</li></a>
-                        <a href="/visualizar_solicitacao"><li>Solicitações</li></a>
-                        <a href="/"><li class="exit">Sair</li></a>
+                        <a href="inicio"><li>Início</li></a>
+                        <a href="solicitacao"><li>Convênio</li></a>
+                        <a href="visualizar_solicitacao"><li>Solicitações</li></a>
+                        <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
             </div>
         </div>

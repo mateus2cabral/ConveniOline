@@ -4,19 +4,20 @@
 
 <div class="form">
     <div class="form-title">Efetue login</div>
-    <form class="form-fields">
+    <form class="form-fields" method="POST" action="handle">
         <div class="user-field">
             <div class="left-side" >Usuário:</div> 
-            <div  class="right-side"><input name='usuario' autofocus></div>
+            <div  class="right-side"><input class="form-field" type="text" name='usuario' autofocus></div>
         </div>
         <div class="password-field">
             <div class="left-side">Senha:</div> 
-            <div class="right-side"><input type="password"></div>
+            <div class="right-side"><input class="form-field" type="password" name="senha"></div>
         </div>
     </form>
     <div class="form-buttons">
         
-        <a href="/inicio"><button type="submit">Entrar</button></a>
+        <input class="form-submit" type="submit" name="entrar" value="Entrar">
+        <!-- <a href="inicio"><button type="submit" name="entrar">Entrar</button></a> -->
     </div>
 </div>
 
