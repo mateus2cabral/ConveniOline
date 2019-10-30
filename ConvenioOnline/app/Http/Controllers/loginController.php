@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 
 class loginController extends Controller
 {
-    public function show () {
+    public function show() {
         return view('login');
     }
 
-    public function handle (Request $dados) {
+    public function logar(Request $dados) {
+        // $usuario = $dados->usuario;
+        // $senha = $dados->senha;
+
+        // return "Usuario: $usuario"." senha: $senha";
         return view('inicio');
     }
 }

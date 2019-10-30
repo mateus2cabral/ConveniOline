@@ -9,44 +9,40 @@
 
         <div class="form-fields-solicitacao"></div>
 
-        <form>
+        <form method="POST" action="enviar">
+            {{csrf_field() }}
             
             <div>
                 <div class="left-side">Representante:</div> 
-                <div class="right-side"><input class="input-solicitacao"></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="representante"></div>
             </div>
             
             <div>
                 <div class="left-side">Empresa:</div> 
-                <div class="right-side"><input class="input-solicitacao"></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="empresa"></div>
             </div>
             
             <div>
                 <div class="left-side">CNPJ:</div> 
-                <div class="right-side"><input class="input-solicitacao"></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="cnpj"></div>
             </div>
             
             <div>
                 <div class="left-side">Endereço:</div> 
-                <div class="right-side"><input class="input-solicitacao"></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="endereco"></div>
             </div>
             
             <div>
                 <div class="left-side">CEP:</div> 
-                <div class="right-side"><input class="input-solicitacao"></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="cep"></div>
             </div> 
 
+            <div class="end-solicitacao"></div>
+                
+            <div class="form-fields-solicitacao"></div>
+    
+            <input class="form-submit" type="submit" value="Enviar"/>
         </form>
-
-        <div class="end-solicitacao"></div>
-            
-        <div class="form-fields-solicitacao"></div>
-            
-            
-        <div class="button-solicitacao">
-            <a href="/"><button type="submit">Solicitar</button></a>
-        </div>
-        
     </div>
 
 </div>

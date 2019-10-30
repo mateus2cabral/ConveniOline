@@ -13,17 +13,19 @@
 
 // Rota para o controller "ConvenioControlller" na função login
 Route::get('login', 'loginController@show');
-Route::post('handle', 'loginControler@handle');
+Route::post('logar', 'loginController@logar');
 
 
 // Rota para o controller "ConvenioControlller" na função logado_formulario
-Route::get('solicitacao', 'ConvenioController@convenio_solicitacao');
+Route::get('solicitacao', 'convenio_solicitacaoController@show');
+Route::post('enviar', 'convenio_solicitacaoController@enviar');
+
 
 // Rota para o controller "ConvenioControlller" na função inicio
-Route::get('inicio', 'ConvenioController@inicio');
+Route::get('inicio', 'inicioController@show');
 
 // Rota para o controller "ConvenioControlller" na função visualizar_solicitacao
-Route::get('visualizar_solicitacao', 'ConvenioController@visualizar_solicitacao');
+Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@show');
 
 // Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
-Route::get('detalhe_solicitacao', 'ConvenioController@detalhe_solicitacao');
+Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
