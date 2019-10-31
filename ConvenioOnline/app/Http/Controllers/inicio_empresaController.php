@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class detalhe_solicitacaoController extends Controller
+class inicio_empresaController extends Controller
 {
     public function show() {
-        return view('preg.detalhe_solicitacao');
+        return view('empresa.inicio_empresa');
     }
-
 }

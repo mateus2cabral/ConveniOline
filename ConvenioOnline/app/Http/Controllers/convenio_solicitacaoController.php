@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class convenio_solicitacaoController extends Controller
 {
     public function show() {
-        return view('convenio_solicitacao');
+        return view('empresa.convenio_solicitacao');
     }
 
     public function enviar(Request $dados) {
-        return view('inicio');
+        return view('empresa.inicio_empresa');
     }
 }

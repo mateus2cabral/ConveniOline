@@ -30,9 +30,8 @@
            <div class="menu-bar">
                 <div class="inner-menu-bar">
                     <ul>
-                        <a href="inicio"><li>Início</li></a>
+                        <a href="inicio_empresa"><li>Início</li></a>
                         <a href="solicitacao"><li>Convênio</li></a>
-                        <a href="visualizar_solicitacao"><li>Solicitações</li></a>
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
             </div>

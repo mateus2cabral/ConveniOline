@@ -11,10 +11,25 @@ class loginController extends Controller
     }
 
     public function logar(Request $dados) {
-        // $usuario = $dados->usuario;
-        // $senha = $dados->senha;
+        $usuario = $dados->usuario;
+        $senha = $dados->senha;
 
-        // return "Usuario: $usuario"." senha: $senha";
-        return view('inicio');
+        if ($usuario != null && $senha != null) {
+
+            if (stristr($usuario, 'preg')) {
+                
+                return view('preg.inicio_preg');
+
+            } else if (stristr($usuario, 'empr')) {
+                
+                return view('empresa.inicio_empresa');
+
+            }
+        
+        } else {
+            return view('login');
+        }
+
+        
     }
 }

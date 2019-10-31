@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class inicioController extends Controller
+class inicio_pregController extends Controller
 {
     public function show() {
-        return view('inicio');
+        return view('preg.inicio_preg');
     }
 }

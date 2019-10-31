@@ -22,7 +22,10 @@ Route::post('enviar', 'convenio_solicitacaoController@enviar');
 
 
 // Rota para o controller "ConvenioControlller" na função inicio
-Route::get('inicio', 'inicioController@show');
+Route::get('inicio_preg', 'inicio_pregController@show');
+
+// Rota para o controller "ConvenioControlller" na função inicio
+Route::get('inicio_empresa', 'inicio_empresaController@show');
 
 // Rota para o controller "ConvenioControlller" na função visualizar_solicitacao
 Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@show');
