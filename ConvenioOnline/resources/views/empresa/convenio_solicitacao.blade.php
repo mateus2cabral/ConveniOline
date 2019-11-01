@@ -9,12 +9,12 @@
 
         <div class="form-fields-solicitacao"></div>
 
-        <form method="POST" action="enviar">
+        <form method="POST" action="enviar_solicitacao">
             {{csrf_field() }}
             
             <div>
                 <div class="left-side">Representante:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="representante"></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="representante" autofocus></div>
             </div>
             
             <div>
@@ -41,7 +41,8 @@
                 
             <div class="form-fields-solicitacao"></div>
     
-            <input class="form-submit" type="submit" value="Enviar"/>
+            <input class="form-submit" type="submit" value="Enviar">
+            <!-- <input class="form-submit" type="submit" value="Enviar"/> -->
         </form>
     </div>
 
