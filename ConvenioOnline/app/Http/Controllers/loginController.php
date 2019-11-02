@@ -13,6 +13,7 @@ class loginController extends Controller
     public function logar(Request $dados) {
         $usuario = $dados->usuario;
         $senha = $dados->senha;
+        
 
         if ($usuario != null && $senha != null) {
 
@@ -25,11 +26,12 @@ class loginController extends Controller
                 return view('empresa.inicio_empresa');
 
             }
+
+            else {return view('login');}
         
         } else {
             return view('login');
         }
-
         
     }
 }
