@@ -22,13 +22,13 @@ class convenio_solicitacaoController extends Controller
 
         if (($representante || $empresa || $cnpj || $cep) != null) {
 
-            DB::collectio('convenios')->insert(
+            DB::collection('convenios')->insert(
                 ['representante' => $dados->representante,
                  'empresa' => $dados->empresa,
                  'cnpj' => $dados->cnpj,
                  'endereco' => $dados->endereco,
                  'cep' => $dados->cep,
-                 'deferido' => false]
+                 'status' => 'a']
             );
 
             return view('empresa.inicio_empresa');

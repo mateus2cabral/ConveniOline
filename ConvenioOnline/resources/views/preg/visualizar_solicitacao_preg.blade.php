@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <div class="visualizar">
 
     <div class="form-title-visualizar">Solicitações de Convênio</div>
@@ -14,35 +16,27 @@
                 <tr>
                     <th>Empresa</th>
                     <th>CNPJ</th>
-                    <th>Cidade</th>
+                    <th>Endereço</th>
                     <th>CEP</th>
                     <th>Ação</th>
                 </tr>
                 
-                <?php for ($i=0; $i < count($empresa); $i++) { ?>
-
-                        <tr>
-
-                            <td>
-                                <?php echo $empresa[$i]?>
-                            </td>
-                            <td>
-                                <?php echo $cnpj[$i]?>
-                            </td>
-                            <td>
-                                <?php echo $endereco[$i]?>
-                            </td>
-                            <td>
-                                <?php echo $cep[$i]?>
-                            </td>
-                            <td>
-                                <a href="/"><button class="button-deferir-indeferir">Deferir</button></a>
-                                <a href="/"><button class="button-deferir-indeferir">Indeferir</button></a>
-                            </td>
-
+                @foreach ($dados as $dado)
+                    @if ($dado['status'] === 'a')
+                        <tr align="center">
+                        <td>{{ $dado['empresa'] }}</td>
+                        <td>{{ $dado['cnpj'] }}</td>
+                        <td>{{ $dado['endereco'] }}</td>
+                        <td>{{ $dado['cep'] }}</td>
+                        <td>
+                            <a href="visualizar_solicitacao"><button class="button-deferir-indeferir">Deferir</button></a>
+                            <a href="visualizar_solicitacao"><button class="button-deferir-indeferir">Indeferir</button></a>
                         </tr>
+                    @endif
+                
+                @endforeach
 
-                <?php } ?>
+                       
 
             </table>
         

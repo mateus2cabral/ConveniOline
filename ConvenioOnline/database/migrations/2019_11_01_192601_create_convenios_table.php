@@ -19,7 +19,7 @@ class CreateConveniosTable extends Migration
             $collection->strig('cnpj');
             $collection->string('endereco');
             $collection->strig('cep');
-            $collection->boolean('deferido');
+            $collection->enum('status', ['d', 'i', 'a']);
         });
     }
 

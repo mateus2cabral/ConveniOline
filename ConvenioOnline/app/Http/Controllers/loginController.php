@@ -21,7 +21,7 @@ class loginController extends Controller
         if ($usuario != null && $senha != null) {
            
             foreach ($users as $user) {
-                echo ($user["login"]." = ".$usuario);
+               
                 if($user["login"] === $usuario && $user["senha"] === $senha) {
                     
                     if (stristr($user["login"], 'preg')) {

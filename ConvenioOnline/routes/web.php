@@ -30,5 +30,7 @@ Route::get('inicio_empresa', 'inicio_empresaController@show');
 // Rota para o controller "ConvenioControlller" na função visualizar_solicitacao
 Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes');
 
+
+
 // Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');

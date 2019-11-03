@@ -83,13 +83,17 @@ table {
 
 .button-deferir-indeferir
 {
-    width: 40%;
+    width: auto;
     height: 40px;
     background-color: rgb(76, 128, 218);
     border: 1px solid rgb(57, 113, 211);
     border-radius: 7px;
     color: white;
     font-size: 20px;
+}
+
+.button-deferir-indeferir:hover {
+    cursor: pointer;
 }
 
 
