@@ -31,7 +31,7 @@ class convenio_solicitacaoController extends Controller
                  'status' => 'a']
             );
 
-            return view('empresa.inicio_empresa');
+            return redirect('/inicio_empresa');
         }
         else {
             //return view('login');

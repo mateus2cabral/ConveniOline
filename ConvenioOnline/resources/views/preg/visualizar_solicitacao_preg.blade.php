@@ -22,6 +22,7 @@
                 </tr>
                 
                 @foreach ($dados as $dado)
+                    <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
                     @if ($dado['status'] === 'a')
                         <tr align="center">
                         <td>{{ $dado['empresa'] }}</td>
@@ -29,8 +30,8 @@
                         <td>{{ $dado['endereco'] }}</td>
                         <td>{{ $dado['cep'] }}</td>
                         <td>
-                            <a href="visualizar_solicitacao"><button class="button-deferir-indeferir">Deferir</button></a>
-                            <a href="visualizar_solicitacao"><button class="button-deferir-indeferir">Indeferir</button></a>
+                            <a href="deferir/{{ $dado['_id'] }}"><button class="button-deferir-indeferir">Deferir</button></a>
+                            <a href="indeferir/{{ $dado['_id'] }}"><button class="button-deferir-indeferir">Indeferir</button></a>
                         </tr>
                     @endif
                 

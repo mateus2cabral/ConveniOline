@@ -17,6 +17,24 @@ class visualizar_solicitacao_pregController extends Controller
     
     }
 
+    public function indeferir($id) {
+
+        DB::collection('convenios')->where('_id', $id)->update(['status' => 'i']);
+
+        return redirect('/visualizar_solicitacao');
+    
+    }
+
+    public function deferir($id) {
+
+        DB::collection('convenios')->where('_id', $id)->update(['status' => 'd']);
+
+        return redirect('/visualizar_solicitacao');
+    
+    }
+
+    
+
     
 
 }// Fim controller

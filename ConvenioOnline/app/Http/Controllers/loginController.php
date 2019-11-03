@@ -27,24 +27,24 @@ class loginController extends Controller
                     if (stristr($user["login"], 'preg')) {
                         
                         $finded = true;
-                        return view('preg.inicio_preg');
+                        return redirect('/inicio_preg');
         
                     } 
                     if (stristr($user["login"], 'empr')) {
                         
                         $finded = true;
-                        return view('empresa.inicio_empresa');
+                        return redirect('/inicio_empresa');
         
                     } 
                 } 
             } 
 
             if ($finded === false) {
-                return view('login');
+                return redirect('/login');
             }
 
         } else {
-            return view('login');
+            return redirect('/login');
         }
         
     }

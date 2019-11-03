@@ -29,7 +29,8 @@ Route::get('inicio_empresa', 'inicio_empresaController@show');
 
 // Rota para o controller "ConvenioControlller" na função visualizar_solicitacao
 Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes');
-
+Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir');
+Route::get('indeferir/{id}', 'visualizar_solicitacao_pregController@indeferir');
 
 
 // Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
