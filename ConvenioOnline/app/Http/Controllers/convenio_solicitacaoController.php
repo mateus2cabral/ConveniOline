@@ -20,7 +20,7 @@ class convenio_solicitacaoController extends Controller
         $endereco = $dados->endereco;
         $cep = $dados->cep;
 
-        if (($representante || $empresa || $cnpj || $cep) != null) {
+        if (($representante && $empresa && $cnpj && $cep)) {
 
             DB::collection('convenios')->insert(
                 ['representante' => $dados->representante,
@@ -34,7 +34,7 @@ class convenio_solicitacaoController extends Controller
             return redirect('/inicio_empresa');
         }
         else {
-            //return view('login');
+            return redirect('/solicitacao');
         }
 
     }
