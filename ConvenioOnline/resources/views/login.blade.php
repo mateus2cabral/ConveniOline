@@ -15,10 +15,12 @@
             <div class="left-side">Senha:</div> 
             <div class="right-side"><input type="password" name="senha"></div>
         </div>
+
         <div class="form-section"></div>
         <div class="form-buttons">
             
             <input class="login-submit" type="submit" value="Entrar">
+            <a href="cadastro">Cadastro</a>
             <!-- <a href="inicio"><button type="submit" name="entrar">Entrar</button></a> -->
         </div>
     </form>

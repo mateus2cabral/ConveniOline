@@ -47,5 +47,11 @@ class loginController extends Controller
             return redirect('/login');
         }
         
-    }
+    } // Função logar
+
+    public function cadastro() {
+
+        return view('cadastro_usuario');
+
+    } // Função cadastro
 }
