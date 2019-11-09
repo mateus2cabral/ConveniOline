@@ -15,22 +15,31 @@ class cadastro_usuarioController extends Controller
 
     public function cadastro(Request $dados) {
 
-        $usuario = $dados->usuario;
+        $nome = $dados->nome;
         $email = $dados->email;
+        $usuario = $dados->usuario;
         $senha = $dados->senha;
-        $tipo = 'empr';
+        $conf_senha = $dados->conf_senha;
+        
+        $tipo = $dados->tipo;
 
-        if (($usuario && $email && $senha && $tipo)) {
+       
 
-            DB::collection('logins')->insert(
-                ['usuario' => $dados->usuario,
-                 'email' => $dados->email,
-                 'senha' => $dados->senha,
-                 'tipo' => $tipo
-                ]
-            );
-
-            return redirect('/login');
+        if (($nome && $usuario && $email && $senha && $tipo)) {
+            if ($senha === $conf_senha) {
+                DB::collection('logins')->insert(
+                    ['nome' => $dados->nome,
+                     'email' => $dados->email,
+                     'usuario' => $dados->usuario,
+                     'senha' => $dados->senha,
+                     'tipo' => $tipo
+                    ]
+                );
+    
+                return redirect('/login');
+            } else {
+                return redirect('/cadastro');
+            }
         }
         else {
             

@@ -37,11 +37,10 @@ class convenio_solicitacaoController extends Controller
             );
 
             return redirect('/inicio_empresa');
-        }
-        else {
             
-            return "falso";
-            // redirect('/solicitacao');
+        } else {
+        
+            redirect('/solicitacao');
         }
 
     }
