@@ -1,4 +1,4 @@
-@extends('templates.menu_empresa')
+<!-- @extends('templates.menu_empresa') -->
 
 @section('content')
 

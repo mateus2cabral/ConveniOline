@@ -1,25 +1,9 @@
-.all-white-solicitacao {
-    margin-top: 100px;
-    background-color: #fbf9ff;
-    height: auto;
-    padding-top: 20px;
-    border: 1px solid #ccc;
-}
-
 .solicitacao {
     width: 600px;
     height: 820px;
+    margin-top: 100px;
     margin: auto;
     border: 1px solid rgba(0,0,0,0.1);
-    background-color: rgb(255, 255, 255);
-    display: block;
-}
-
-.form-solicitacao {
-    width: 530px;
-    height: 400px;
-    margin: auto;
-    border: 0px solid rgba(0,0,0,0.1);
     background-color: rgb(255, 255, 255);
     display: block;
 }
@@ -31,14 +15,18 @@
     font-size: 32px;
 }
 
-.input-solicitacao {
-    border: 1px solid  #ccc;
-    border-radius: 6px;
-    height: 35px;
+.form-solicitacao {
     width: 530px;
-    font-size: 18px;
-    padding: 2px;
-    background-color: rgb(248, 251, 255);
+    height: 400px;
+    margin: auto;
+    border: 0px solid rgba(0,0,0,0.1);
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.form-fields-solicitacao {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 15px;   
 }
 
 .l-side {
@@ -54,21 +42,8 @@
     margin-bottom: 5px;
 }
 
-.form-fields-solicitacao {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding-bottom: 15px;   
-}
-
-.end-solicitacao {
-    margin-top: auto;
-    width: 530px;
-    height: 300px;
-    display: block;
-}
-
 .form-submit {
     float: right;
-    /* margin: 10px 125px 10px 125px; */
     margin-top: 10px;
     width: 120px;
     height: 45px;
@@ -81,5 +56,30 @@
 
 .button-solicitacao {
     margin: 15px 100px 0px 110px;
+    display: block;
+}
+
+.all-white-solicitacao {
+    margin-top: 100px;
+    background-color: #fbf9ff;
+    height: auto;
+    padding-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.input-solicitacao {
+    border: 1px solid  #ccc;
+    border-radius: 6px;
+    height: 35px;
+    width: 530px;
+    font-size: 18px;
+    padding: 2px;
+    background-color: rgb(248, 251, 255);
+}
+
+.end-solicitacao {
+    margin-top: auto;
+    width: 530px;
+    height: 300px;
     display: block;
 }

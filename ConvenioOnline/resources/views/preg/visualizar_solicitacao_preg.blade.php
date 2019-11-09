@@ -1,6 +1,19 @@
-@extends('templates.menu_preg')
+<!-- @extends('templates.menu_preg') -->
 
 @section('content')
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- <title>ConvênioOnline - UESPI</title> -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/preg/visualizar.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'> -->
+    
+</head>
+
+
 
 
 

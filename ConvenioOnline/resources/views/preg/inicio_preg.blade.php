@@ -1,4 +1,4 @@
-@extends('templates.menu_preg')
+<!-- @extends('templates.menu_preg') -->
 
 @section('content')
 
