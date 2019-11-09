@@ -1,6 +1,20 @@
-@extends('templates.cadastro')
+<!-- @extends('templates.cadastro') -->
 
 @section('content')
+
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- <title>ConvênioOnline - UESPI</title> -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/cadastro.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'>
+    
+</head>
+
+
 
 <div class="solicitacao">
 

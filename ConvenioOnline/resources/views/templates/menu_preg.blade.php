@@ -6,11 +6,12 @@
     <title>ConvênioOnline - UESPI</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/inicio.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/solicitacao.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/visualizar.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/detalhe_solicitacao.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/menu.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'> -->
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/solicitacao.css'> -->
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/visualizar.css'> -->
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/detalhe_solicitacao.css'> -->
 </head>
 <body>
    <div class="container">
@@ -18,7 +19,7 @@
            <div class="logo">
                <a href="https://www.uespi.br/site/"> <img src="image/logo-uespi.png" width="208" height="80"></a>
                </div>
-            <a href="inicio">
+            <a href="inicio_preg">
            <div class="title">
                ConvênioOnline
            </div>

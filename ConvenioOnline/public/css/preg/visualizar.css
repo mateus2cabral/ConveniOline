@@ -10,18 +10,12 @@ td {
     padding-bottom: 15px;
 }
 
+
 table {
     margin-top: 10px;
     width: 970px;
     padding: 10px 10px 10px 10px;
 }
-
-
-
-
-
-
-
 
 .visualizar
  {
@@ -95,6 +89,3 @@ table {
 .button-deferir-indeferir:hover {
     cursor: pointer;
 }
-
-
-

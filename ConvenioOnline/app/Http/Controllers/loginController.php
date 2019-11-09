@@ -51,7 +51,7 @@ class loginController extends Controller
 
     public function cadastro() {
 
-        return view('cadastro_usuario');
+        return view('empresa.cadastro_usuario');
 
     } // Função cadastro
 }
