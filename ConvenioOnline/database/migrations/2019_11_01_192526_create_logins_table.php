@@ -15,7 +15,9 @@ class CreateLoginsTable extends Migration
     {
         Schema::create('logins', function (Blueprint $collection) {
             $collection->strig('usuario');
+            $email->string('email');
             $collection->string('senha');
+            $collection->string('tipo');
         });
     }
 

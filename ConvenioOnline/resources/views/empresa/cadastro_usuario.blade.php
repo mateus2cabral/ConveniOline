@@ -23,18 +23,18 @@
 
         <div class="form-fields-solicitacao"></div>
 
-        <!-- <form method="POST" action="enviar_solicitacao"> -->
-            <!-- {{csrf_field() }} -->
-            <form action="login">
+        <form method="POST" action="cadastrar">
+            {{csrf_field() }}
+            <!-- <form action="login"> -->
             
             <div>
                 <div class="left-side">Nome:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="nome_usuario" autofocus></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="usuario" autofocus></div>
             </div>
 
             <div>
                 <div class="left-side">E-mail:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="e-mail" autofocus></div>
+                <div class="right-side"><input class="input-solicitacao" type="text" name="email" autofocus></div>
             </div>
             
             <div>
@@ -44,7 +44,7 @@
 
             <div>
                 <div class="left-side">Confirme a senha:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="password" name="senha"></div>
+                <div class="right-side"><input class="input-solicitacao" type="password"></div>
             </div>
             
             

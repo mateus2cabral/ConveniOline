@@ -22,15 +22,15 @@ class loginController extends Controller
            
             foreach ($users as $user) {
                
-                if($user["login"] === $usuario && $user["senha"] === $senha) {
+                if($user["usuario"] === $usuario && $user["senha"] === $senha) {
                     
-                    if (stristr($user["login"], 'preg')) {
+                    if ($user["tipo"] == 'preg') {
                         
                         $finded = true;
                         return redirect('/inicio_preg');
         
                     } 
-                    if (stristr($user["login"], 'empr')) {
+                    if ($user["tipo"] == 'empr') {
                         
                         $finded = true;
                         return redirect('/inicio_empresa');
