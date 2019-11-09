@@ -13,28 +13,38 @@
             {{csrf_field() }}
             
             <div>
-                <div class="left-side">Representante:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="representante" autofocus></div>
+                <div class="l-side">Nome do Representante:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="representante" autofocus></div>
             </div>
             
             <div>
-                <div class="left-side">Empresa:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="empresa"></div>
+                <div class="l-side">Razão Social:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="rsocial"></div>
             </div>
             
             <div>
-                <div class="left-side">CNPJ:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="cnpj"></div>
+                <div class="l-side">CNPJ:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="cnpj"></div>
+            </div>
+
+            <div>
+                <div class="l-side">Ie:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="ie"></div>
             </div>
             
             <div>
-                <div class="left-side">Endereço:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="endereco"></div>
+                <div class="l-side">Endereço:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="endereco"></div>
             </div>
             
             <div>
-                <div class="left-side">CEP:</div> 
-                <div class="right-side"><input class="input-solicitacao" type="text" name="cep"></div>
+                <div class="l-side">CEP:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="cep"></div>
+            </div> 
+
+            <div>
+                <div class="l-side">Contato:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="contato"></div>
             </div> 
 
             <div class="end-solicitacao"></div>

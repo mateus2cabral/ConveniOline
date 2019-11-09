@@ -15,11 +15,14 @@ class CreateConveniosTable extends Migration
     {
         Schema::create('convenios', function (Blueprint $collection) {
             $collection->strig('representante');
-            $collection->string('empresa');
+            $collection->string('rsocial');
             $collection->strig('cnpj');
+            $collection->strig('ie');
             $collection->string('endereco');
             $collection->strig('cep');
+            $collection->strig('contato');
             $collection->enum('status', ['d', 'i', 'a']);
+            $collection->date('data');
         });
     }
 

@@ -15,26 +15,32 @@ class convenio_solicitacaoController extends Controller
     public function enviar_solicitacao(Request $dados) {
 
         $representante = $dados->representante;
-        $empresa = $dados->empresa;
+        $rsocial = $dados->rsocial;
         $cnpj = $dados->cnpj;
+        $ie = $dados->ie;
         $endereco = $dados->endereco;
         $cep = $dados->cep;
+        $contato = $dados->contato;
 
-        if (($representante && $empresa && $cnpj && $cep)) {
+        if (($representante && $rsocial && $cnpj && $ie && $endereco && $cep && $contato)) {
 
             DB::collection('convenios')->insert(
                 ['representante' => $dados->representante,
-                 'empresa' => $dados->empresa,
+                 'rsocial' => $dados->rsocial,
                  'cnpj' => $dados->cnpj,
+                 'ie' => $dados->ie,
                  'endereco' => $dados->endereco,
                  'cep' => $dados->cep,
+                 'contato' => $dados->contato,
                  'status' => 'a']
             );
 
             return redirect('/inicio_empresa');
         }
         else {
-            return redirect('/solicitacao');
+            
+            return "falso";
+            // redirect('/solicitacao');
         }
 
     }

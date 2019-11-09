@@ -14,7 +14,7 @@
             <table align="center">
 
                 <tr>
-                    <th>Empresa</th>
+                    <th>Razão Social</th>
                     <th>CNPJ</th>
                     <th>Endereço</th>
                     <th>CEP</th>
@@ -25,7 +25,7 @@
                     <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
                     @if ($dado['status'] === 'a')
                         <tr align="center">
-                        <td>{{ $dado['empresa'] }}</td>
+                        <td>{{ $dado['rsocial'] }}</td>
                         <td>{{ $dado['cnpj'] }}</td>
                         <td>{{ $dado['endereco'] }}</td>
                         <td>{{ $dado['cep'] }}</td>
