@@ -9,11 +9,11 @@
 
         <div class="user-field">
             <div class="left-side" >Usuário:</div> 
-            <div  class="right-side"><input type="text" name='usuario' autofocus></div>
+            <div  class="right-side"><input type="text" name='usuario' autofocus required></div>
         </div>
         <div class="password-field">
             <div class="left-side">Senha:</div> 
-            <div class="right-side"><input type="password" name="senha"></div>
+            <div class="right-side"><input type="password" name="senha" required></div>
         </div>
 
         <div class="form-section"></div>

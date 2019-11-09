@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -11,6 +11,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/solicitacao.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/visualizar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/detalhe_solicitacao.css'>
+    <script type="text/javascript" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 </head>
 <body>
    <div class="container">
@@ -38,6 +39,7 @@
         </div>
         <div class="all-white-menu">
             @yield('content')
+            
         </div>
 
 

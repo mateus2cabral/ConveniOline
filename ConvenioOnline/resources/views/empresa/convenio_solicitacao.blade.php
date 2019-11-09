@@ -14,37 +14,37 @@
             
             <div>
                 <div class="l-side">Nome do Representante:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="representante" autofocus></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="representante" autofocus required></div>
             </div>
             
             <div>
                 <div class="l-side">Razão Social:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="rsocial"></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="rsocial" required></div>
             </div>
             
             <div>
                 <div class="l-side">CNPJ:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="cnpj"></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="cnpj" required ></div>
             </div>
 
             <div>
                 <div class="l-side">Ie:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="ie"></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="ie" required></div>
             </div>
             
             <div>
                 <div class="l-side">Endereço:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="endereco"></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="endereco" required></div>
             </div>
             
             <div>
                 <div class="l-side">CEP:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="cep"></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="cep" required></div>
             </div> 
 
             <div>
                 <div class="l-side">Contato:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="contato"></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="contato" required ></div>
             </div> 
 
             <div class="end-solicitacao"></div>
@@ -59,3 +59,5 @@
 </div>
         
 @endsection
+
+
