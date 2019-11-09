@@ -32,7 +32,8 @@ class convenio_solicitacaoController extends Controller
                  'endereco' => $dados->endereco,
                  'cep' => $dados->cep,
                  'contato' => $dados->contato,
-                 'status' => 'a']
+                 'status' => 'a',
+                 'data' => date('d-m-Y')]
             );
 
             return redirect('/inicio_empresa');
