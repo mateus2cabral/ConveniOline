@@ -21,7 +21,7 @@
         <div class="form-buttons">
             
             <input class="login-submit" type="submit" value="Entrar">
-            <a class="bt-cadastro" href="cadastro">Ainda não possui uma conta?</a>
+            <a class="bt-cadastro" href="cadastro">Criar uma conta</a>
             <!-- <a href="inicio"><button type="submit" name="entrar">Entrar</button></a> -->
         </div>
     </form>

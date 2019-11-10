@@ -54,7 +54,7 @@ input {
 
 .login-submit {
     margin: 30px 10px 10px 10px;
-    margin-top: 10px; 
+    margin-top: 15px; 
     width: 280px;
     height: 45px;
     background-color: rgb(76, 128, 218);
@@ -64,10 +64,16 @@ input {
     font-size: 20px;
 }
 
+.login-submit:hover {
+    cursor: pointer;
+}
+
 .bt-cadastro {
     text-decoration: none;
     float: right;
     color: black;
+    margin-right: 10px;
+    margin-top: 7px;
 }
 
 .bt-cadastro:hover {
