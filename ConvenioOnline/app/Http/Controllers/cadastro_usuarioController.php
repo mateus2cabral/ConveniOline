@@ -13,7 +13,7 @@ class cadastro_usuarioController extends Controller
     // Função cadastrar usuarios
 
 
-    public function cadastro(Request $dados) {
+    public function cadastro_empresa(Request $dados) {
 
         $nome = $dados->nome;
         $email = $dados->email;
@@ -21,7 +21,7 @@ class cadastro_usuarioController extends Controller
         $senha = $dados->senha;
         $conf_senha = $dados->conf_senha;
         
-        $tipo = $dados->tipo;
+        $tipo = 'empr';
 
        
 
