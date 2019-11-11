@@ -2,7 +2,30 @@
 
 @section('content')
 
+
+
 <link rel='stylesheet' type='text/css' media='screen' href='./css/preg/visualizar_solicitacao_preg.css'>
+
+<div class="modal">
+
+    <div class="modal-title">Justificativa</div>
+
+    <textarea class="modal-input" scroll='no'  name="modal-input" id="" cols="30" rows="10"></textarea>
+
+    <div class="modal-buttom">
+
+            <input class="justificativa-submit" type="submit" value="Salvar">
+            <input class="justificativa-fechar" type="submit" value="Fechar">
+    
+        </div>
+</div>
+
+
+
+
+
+
+
 
 <div class="form-visualizar">
 <div class="visualizar">

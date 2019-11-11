@@ -47,6 +47,11 @@
             <div>
                 <div class="l-side">Contato:</div> 
                 <div class="r-side"><input class="input-solicitacao" type="text" name="contato" required ></div>
+            </div>
+
+            <div>
+                <div class="l-side">Áreas de interesse:</div> 
+                <div class="r-side"><input class="input-solicitacao" type="text" name="contato" required ></div>
             </div> 
 
             <div class="end-solicitacao"></div>
