@@ -4,10 +4,10 @@
 
 <link rel='stylesheet' type='text/css' media='screen' href='./css/preg/visualizar_solicitacao_preg.css'>
 
+<div class="form-visualizar">
 <div class="visualizar">
 
     <div class="form-title-visualizar">Solicitações de Convênio</div>
-    <div class="form-visualizar">
 
         <div class="form-fields-visualizar"></div>
 

@@ -1,8 +1,8 @@
 @extends('templates.moldura_preg')
+@section('content')
 
 <link rel='stylesheet' type='text/css' media='screen' href='./css/preg/inicio_preg.css'>
 
-@section('content')
 
 <head>
     <meta charset='utf-8'>

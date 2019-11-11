@@ -18,6 +18,10 @@ Route::post('logar', 'loginController@logar');
 Route::get('cadastro', 'loginController@cadastro');
 Route::post('cadastro_empresa', 'cadastro_usuarioController@cadastro_empresa');
 
+Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios');
+Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario');
+Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario');
+
 
 // Rota para o controller "ConvenioControlller" na função logado_formulario
 Route::get('solicitacao', 'convenio_solicitacaoController@show');
