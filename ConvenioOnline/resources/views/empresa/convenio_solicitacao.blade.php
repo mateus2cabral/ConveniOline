@@ -1,21 +1,9 @@
+@extends('templates.moldura_empresa')
 @section('content')
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <!-- <title>ConvênioOnline - UESPI</title> -->
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'> -->
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/solicitacao.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'>
+
+<link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/convenio__solicitacao.css'>
+
     
-</head>
-
-
-
-
-<!-- @extends('templates.menu_empresa') -->
-
-
 <div class="solicitacao">
 
     <div class="form-title-solicitacao">Solicitação de Convênio</div>
@@ -66,7 +54,7 @@
             <div class="form-fields-solicitacao"></div>
     
             <input class="form-submit" type="submit" value="Enviar">
-            <!-- <input class="form-submit" type="submit" value="Enviar"/> -->
+            
         </form>
     </div>
 

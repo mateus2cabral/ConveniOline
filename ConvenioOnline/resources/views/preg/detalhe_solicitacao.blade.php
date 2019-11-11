@@ -1,6 +1,8 @@
-@extends('templates.menu')
+@extends('templates.moldura_preg')
 
 @section('content')
+
+<link rel='stylesheet' type='text/css' media='screen' href='./css/preg/detalhe_solicitacao.css'>
 
 <div class="solicitacao">
 

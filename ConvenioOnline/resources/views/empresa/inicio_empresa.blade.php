@@ -1,7 +1,11 @@
-<!-- @extends('templates.menu_empresa') -->
+@extends('templates.moldura_empresa')
+   
 
 @section('content')
 
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/inicio_empresa.css'>
+
+         
     <article class="feed">
 
         <div class="feed-img">

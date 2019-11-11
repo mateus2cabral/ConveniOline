@@ -1,4 +1,6 @@
-<!-- @extends('templates.menu_preg') -->
+@extends('templates.moldura_preg')
+
+<link rel='stylesheet' type='text/css' media='screen' href='./css/preg/inicio_preg.css'>
 
 @section('content')
 

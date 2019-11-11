@@ -2,18 +2,18 @@
 
 @section('content')
 
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/cadastro.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/cadastro_usuario.css'>
 
 <div class="solicitacao">
 
     <div class="form-title-solicitacao">Cadastro</div>
     <div class="form-solicitacao">
 
-        <!-- <div class="form-fields-solicitacao"></div> -->
+        
 
         <form method="POST" action="cadastrar">
             {{csrf_field() }}
-            <!-- <form action="login"> -->
+            
             <div>
                 <div class="left-side">Tipo de usuário:</div> 
                 <div class="option">

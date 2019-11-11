@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>ConvênioOnline - UESPI</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/moldura.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/template/moldura.css'>
     
 </head>
 <body>
@@ -27,21 +27,18 @@
            
            <!-- End -->
 
-           <footer>
-		    <div class="footer" >
-		      <!-- <div class="borda"></div> -->
-                <h6 align="center">NPD - Núcleo de Processamento de dados. <br/> 
-                Em caso de problemas entre em contato pelo E-mail fullstackof@gmail.com<br/> 
-                lembrando sempre de informar seu usuário.<br />
-                © 2019 Universidade Estadual do Piauí - UESPI. Todos os direitos reservados.
-                </h6>		  
-                <p></p>  
-            </div>
-		</footer>
+            <footer>
+                <div class="footer" >
+                    <h6 align="center">NPD - Núcleo de Processamento de dados. <br/> 
+                    Em caso de problemas entre em contato pelo E-mail fullstackof@gmail.com<br/> 
+                    lembrando sempre de informar seu usuário.<br />
+                    © 2019 Universidade Estadual do Piauí - UESPI. Todos os direitos reservados.
+                    </h6>		  
+                    <p></p>  
+                </div>
+            </footer>
 
        </div>
-
-        
 
    </div>
 </body>
