@@ -6,24 +6,6 @@
 
 <link rel='stylesheet' type='text/css' media='screen' href='./css/preg/visualizar_solicitacao_preg.css'>
 
-<div class="modal">
-
-    <div class="modal-title">Justificativa</div>
-
-    <textarea class="modal-input" scroll='no'  name="modal-input" id="" cols="30" rows="10"></textarea>
-
-    <div class="modal-buttom">
-
-            <input class="justificativa-submit" type="submit" value="Salvar">
-            <input class="justificativa-fechar" type="submit" value="Fechar">
-    
-        </div>
-</div>
-
-
-
-
-
 
 
 
@@ -54,7 +36,7 @@
                         <td>{{ $dado['cep'] }}</td>
                         <td>
                             <a href="deferir/{{ $dado['_id'] }}"><button class="button-deferir-indeferir">Deferir</button></a>
-                            <a href="indeferir/{{ $dado['_id'] }}"><button class="button-deferir-indeferir">Indeferir</button></a>
+                            <button class="button-deferir-indeferir" onclick="mostrar_pop_up()">Indeferir</button>
                         </tr>
                     @endif
                 
@@ -69,6 +51,26 @@
     </div>
 
 </div>
+
+<form action="indeferir" method="post">
+{{csrf_field() }}
+
+    <div class="modal" id="modal">
+
+        <div class="modal-title">Justificativa</div>
+
+        <textarea class="modal-input" scroll='no'  name="modal_input" id="" cols="30" rows="10"></textarea>
+        <input type="text" name="id" value="{{ $dado['_id'] }}">
+
+        <div class="modal-buttom">
+
+            <input class="justificativa-submit" type="submit" value="Salvar">
+            <input class="justificativa-fechar" value="Fechar" onclick="ocultar_pop_up()">
+        
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="js/visualizar_solicitacao_preg.js"></script>
         
 @endsection
 
