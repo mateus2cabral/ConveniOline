@@ -12,6 +12,9 @@
 */
 
 // Rota para o controller "ConvenioControlller" na função login
+
+use Illuminate\Support\Facades\Route;
+
 Route::get('login', 'loginController@show');
 Route::post('logar', 'loginController@logar');
 
