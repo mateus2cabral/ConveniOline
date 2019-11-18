@@ -17,10 +17,13 @@ class visualizar_solicitacao_pregController extends Controller
     
     }
 
-    public function indeferir($id) {
 
-        DB::collection('convenios')->where('_id', $id)->update(['status' => 'i']);
+    public function indeferir(Request $dados) {
 
+        DB::collection('convenios')->where('_id', $dados->id)->update(['status' => 'i']);
+        DB::collection('convenios')->where('_id', $dados->id)->update(['observacao' => $dados->modal_input]);
+
+        
         return redirect('/visualizar_solicitacao');
     
     }
@@ -32,6 +35,8 @@ class visualizar_solicitacao_pregController extends Controller
         return redirect('/visualizar_solicitacao');
     
     }
+
+
 
     
 

@@ -51,7 +51,7 @@
 
             <div>
                 <div class="l-side">Áreas de interesse:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="contato" required ></div>
+                <div class="r-side"><input class="input-solicitacao" type="text" name="aconhecimento" required ></div>
             </div> 
 
             <div class="end-solicitacao"></div>

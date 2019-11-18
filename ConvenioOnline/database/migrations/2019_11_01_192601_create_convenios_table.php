@@ -14,6 +14,7 @@ class CreateConveniosTable extends Migration
     public function up()
     {
         Schema::create('convenios', function (Blueprint $collection) {
+            $collection->strig('login');
             $collection->strig('representante');
             $collection->string('rsocial');
             $collection->strig('cnpj');
@@ -22,6 +23,8 @@ class CreateConveniosTable extends Migration
             $collection->strig('cep');
             $collection->strig('contato');
             $collection->enum('status', ['d', 'i', 'a']);
+            $collection->strig('observacao');
+            $collection->strig('aconhecimento');
             $collection->date('data');
         });
     }

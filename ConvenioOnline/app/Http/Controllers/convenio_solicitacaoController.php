@@ -25,7 +25,8 @@ class convenio_solicitacaoController extends Controller
         if (($representante && $rsocial && $cnpj && $ie && $endereco && $cep && $contato)) {
 
             DB::collection('convenios')->insert(
-                ['representante' => $dados->representante,
+                ['login' => '',
+                 'representante' => $dados->representante,
                  'rsocial' => $dados->rsocial,
                  'cnpj' => $dados->cnpj,
                  'ie' => $dados->ie,
@@ -33,7 +34,9 @@ class convenio_solicitacaoController extends Controller
                  'cep' => $dados->cep,
                  'contato' => $dados->contato,
                  'status' => 'a',
-                 'data' => date('d-m-Y')]
+                 'observacao' => '',
+                 'data' => date('d-m-Y'),
+                 'aconhecimento' => $dados->aconhecimento]
             );
 
             return redirect('/inicio_empresa');
