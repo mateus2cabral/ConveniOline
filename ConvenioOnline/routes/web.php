@@ -27,6 +27,8 @@ Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario')
 
 
 // Rota para o controller "ConvenioControlller" na função logado_formulario
+Route::get('solicitacao/{login}', 'convenio_solicitacaoController@validar');
+
 Route::get('solicitacao', 'convenio_solicitacaoController@show');
 Route::post('enviar_solicitacao', 'convenio_solicitacaoController@enviar_solicitacao');
 

@@ -33,7 +33,10 @@ class loginController extends Controller
                     if ($user["tipo"] == 'empr') {
                         
                         $finded = true;
-                        return redirect('/inicio_empresa');
+
+                        return view('empresa.inicio_empresa', compact('dados'));
+
+                        // return redirect('/inicio_empresa');
         
                     } 
                 } 
