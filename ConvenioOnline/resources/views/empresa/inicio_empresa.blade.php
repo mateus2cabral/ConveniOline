@@ -3,6 +3,8 @@
 
 @section('content')
 
+
+
     <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/inicio_empresa.css'>
 
          

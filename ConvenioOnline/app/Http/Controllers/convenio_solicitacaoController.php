@@ -8,9 +8,39 @@ use DB;
 
 class convenio_solicitacaoController extends Controller
 {
+    // public function show($usuario) {
+        
+    //     DB::collection('convenios')->select('login', )
+    //     where('login', $usuario)
+
+    //     return view('empresa.convenio_solicitacao', compact('usuario'));
+    // }
+
+
+    public function validar($login) {
+        $convenios = DB::collection('convenios')->get();
+        $finded = false;
+        foreach ($convenios as $convenio) {
+            if ($convenio['login'] === $login) {
+                echo 'ja solicitou';
+                $finded = true;
+            } else {
+                echo 'não solicitou';
+                $finded = false;
+            }
+        }
+        if (!$finded){
+            return redirect('solicitacao')->with($login);
+        }
+
+    }
+
     public function show() {
         return view('empresa.convenio_solicitacao');
     }
+
+
+
 
     public function enviar_solicitacao(Request $dados) {
 

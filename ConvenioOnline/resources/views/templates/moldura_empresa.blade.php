@@ -9,6 +9,11 @@
 
 </head>
 <body>
+
+
+
+
+
    <div class="container">
        <header class="h-eader">
             <div class="logo">
@@ -27,7 +32,7 @@
                 <div class="inner-menu-bar">
                     <ul>
                         <a href="inicio_empresa"><li>Início</li></a>
-                        <a href="solicitacao"><li>Convênio</li></a>
+                        <a href="solicitacao/{{ $dados['usuario'] ?? ''}}"><li>Convênio</li></a>
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
                 </div>
