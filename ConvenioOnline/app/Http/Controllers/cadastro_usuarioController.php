@@ -32,23 +32,44 @@ class cadastro_usuarioController extends Controller
         $conf_senha = $dados->conf_senha;
         $tipo = 'empr';
 
-        if (($nome && $usuario && $email && $senha && $tipo)) {
-            if ($senha === $conf_senha) {
-                DB::collection('logins')->insert(
-                    ['nome' => $dados->nome,
-                     'email' => $dados->email,
-                     'usuario' => $dados->usuario,
-                     'senha' => $dados->senha,
-                     'tipo' => $tipo
-                    ]
-                );
-    
-                return redirect('/login');
-            }
-            else {return redirect('/cadastro');}
-        }
-        else {return redirect('/cadastro');}
+        
+        
+        $dados_users = DB::collection('logins')->get();
+        $existe = false;
 
+        if (($nome && $usuario && $email && $senha && $tipo)) {
+            
+            foreach ($dados_users as $dado_user) {
+                if ($dado_user['usuario'] === $usuario) {
+                    $existe = true;
+                } // Fim valida se usuario ja existe
+            } // Fim foreach
+
+
+            if ($existe === false) {
+                
+                if ($senha === $conf_senha) {
+                    DB::collection('logins')->insert(
+                            ['nome' => $dados->nome,
+                            'email' => $dados->email,
+                            'usuario' => $dados->usuario,
+                            'senha' => $dados->senha,
+                            'tipo' => $tipo
+                            ]
+                        );
+                        return redirect('/login');
+                        
+                    }
+                    else {return redirect('/cadastro');}
+                    
+                }
+                    
+                else {return redirect('/cadastro');}
+                    
+        } // Fim if verifica se todos campos foram preenchidos
+
+        else {return redirect('/cadastro');}
+            
     } // Fim da função de cadastro da empresa
 
 
@@ -65,22 +86,42 @@ class cadastro_usuarioController extends Controller
         $conf_senha = $dados->conf_senha;
         $tipo = $dados->tipo;
 
-        if (($nome && $usuario && $email && $senha && $tipo)) {
-            if ($senha === $conf_senha) {
-                DB::collection('logins')->insert(
-                    ['nome' => $dados->nome,
-                     'email' => $dados->email,
-                     'usuario' => $dados->usuario,
-                     'senha' => $dados->senha,
-                     'tipo' => $dados->tipo
-                    ]
-                );
-    
-                return redirect('/usuarios');
+        
+        $dados_users = DB::collection('logins')->get();
+        $existe = false;
 
-            }
-            else {return redirect('/cadastro_usuario');}
-        }
+
+
+        if (($nome && $usuario && $email && $senha && $tipo)) {
+
+            foreach ($dados_users as $dado_user) {
+                if ($dado_user['usuario'] === $usuario) {
+                    $existe = true;
+                } // Fim valida se usuario ja existe
+            } // Fim foreach
+
+
+            if ($existe === false) {
+
+                if ($senha === $conf_senha) {
+                    DB::collection('logins')->insert(
+                        ['nome' => $dados->nome,
+                        'email' => $dados->email,
+                        'usuario' => $dados->usuario,
+                        'senha' => $dados->senha,
+                        'tipo' => $dados->tipo
+                        ]
+                    );
+        
+                    return redirect('/usuarios');
+
+                }
+                else {return redirect('/cadastro_usuario');}
+
+            } // Fim valida se usuário já existe
+
+        } // Fim valida se todos campos foram preenchidos
+
         else {return redirect('/cadastro_usuario');}
 
     } // Fim da função de cadastro de todos usuários
