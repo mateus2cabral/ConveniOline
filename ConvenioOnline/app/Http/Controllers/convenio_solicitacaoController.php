@@ -8,31 +8,30 @@ use DB;
 
 class convenio_solicitacaoController extends Controller
 {
-    // public function show($usuario) {
-        
-    //     DB::collection('convenios')->select('login', )
-    //     where('login', $usuario)
 
-    //     return view('empresa.convenio_solicitacao', compact('usuario'));
-    // }
-
-
-    public function validar($login) {
+    public function validar() {
+        session_start();
         $convenios = DB::collection('convenios')->get();
         $finded = false;
         foreach ($convenios as $convenio) {
-            if ($convenio['login'] === $login) {
-                echo 'ja solicitou';
+            // echo $convenio["login"];
+            if ($convenio['login'] === $_SESSION["user"]) {
+                
                 $finded = true;
             } else {
-                echo 'não solicitou';
+                
                 $finded = false;
             }
         }
-        if (!$finded){
-            return redirect('solicitacao')->with($login);
+        if ($finded){
+            echo 'ja solicitou';
+            // return redirect('solicitacao')->with($login);
+        } else {
+            echo 'não solicitou';
+            return redirect('/solicitacao');
         }
 
+        
     }
 
     public function show() {
@@ -53,9 +52,9 @@ class convenio_solicitacaoController extends Controller
         $contato = $dados->contato;
 
         if (($representante && $rsocial && $cnpj && $ie && $endereco && $cep && $contato)) {
-
+            session_start();
             DB::collection('convenios')->insert(
-                ['login' => '',
+                ['login' => $_SESSION["user"],
                  'representante' => $dados->representante,
                  'rsocial' => $dados->rsocial,
                  'cnpj' => $dados->cnpj,
