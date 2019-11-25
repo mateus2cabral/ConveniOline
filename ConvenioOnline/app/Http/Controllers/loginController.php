@@ -34,7 +34,7 @@ class loginController extends Controller
                         
                         $finded = true;
 
-                        return view('empresa.inicio_empresa', compact('dados'));
+                        return redirect('/inicio_empresa');
 
                         // return redirect('/inicio_empresa');
         
@@ -43,7 +43,7 @@ class loginController extends Controller
 
                         $finded = true;
                         
-                        return view('professor.professor',compact('dados'));
+                        return redirect('/inicio_professor');
                     } 
                 } 
             } 
