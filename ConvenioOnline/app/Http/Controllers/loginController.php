@@ -8,6 +8,9 @@ use DB;
 class loginController extends Controller
 {
     public function show() {
+        session_start();
+        unset($_SESSION["user"]);
+        unset($_SESSION["tipo"]);
         return view('login');
     }
 
@@ -23,15 +26,18 @@ class loginController extends Controller
             foreach ($users as $user) {
                
                 if($user["usuario"] === $usuario && $user["senha"] === $senha) {
-                    
+                    session_start();
+                    $_SESSION["user"] = $user["usuario"];
+
+
                     if ($user["tipo"] == 'preg') {
-                        
+                        $_SESSION["tipo"]= 'preg';
                         $finded = true;
                         return redirect('/inicio_preg');
         
                     } 
                     if ($user["tipo"] == 'empr') {
-                        
+                        $_SESSION["tipo"]= 'empr';
                         $finded = true;
 
                         return redirect('/inicio_empresa');
@@ -40,7 +46,7 @@ class loginController extends Controller
         
                     }
                     if ($user["tipo"]== 'prof'){
-
+                        $_SESSION["tipo"]= 'prof';
                         $finded = true;
                         
                         return redirect('/inicio_professor');
