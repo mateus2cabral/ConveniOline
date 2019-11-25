@@ -52,6 +52,10 @@
                         @if ($dado['tipo'] === 'empr')
                             <td>EMPRESA</td>
                         @endif
+
+                        @if ($dado['tipo'] === 'prof')
+                            <td>PROFESSOR</td>
+                        @endif
                 
                 @endforeach
 

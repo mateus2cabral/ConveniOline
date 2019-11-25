@@ -38,6 +38,12 @@ class loginController extends Controller
 
                         // return redirect('/inicio_empresa');
         
+                    }
+                    if ($user["tipo"]== 'prof'){
+
+                        $finded = true;
+                        
+                        return view('professor.professor',compact('dados'));
                     } 
                 } 
             } 

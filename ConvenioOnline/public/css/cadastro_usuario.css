@@ -15,7 +15,7 @@ form {
 }
 
 .form-title-solicitacao {
-    padding: 0px 35px 50px 0px;
+    padding: 0px 35px 75px 0px;
     /* width: 300px; */
     height: 10px;
     font-size: 32px;
@@ -38,9 +38,9 @@ form {
 
 .left-side {
     float: left;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 120px;
+    padding-top: 14px;
+    padding-bottom: 24px;
+    width: 100px;
 }
 
 .right-side {
@@ -60,7 +60,7 @@ form {
 
 .form-submit {
     float: right;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 120px;
     height: 45px;
     background-color: rgb(76, 128, 218);

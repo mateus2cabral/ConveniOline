@@ -14,7 +14,7 @@ class CreateAlunosTable extends Migration
      */
     public function up()
     {
-        Schema::create('convenios', function($Collection){
+        Schema::create('alunos', function($Collection){
             $Collection->string('nome');
             $Collection->string('matricula');
             $Collection->string('curso');

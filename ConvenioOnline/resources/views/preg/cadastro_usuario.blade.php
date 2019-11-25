@@ -17,6 +17,7 @@
             <select name='tipo' id=1 selected="selected" class="combo-box">
                 <option class="option" value="preg">PREG</option>
                 <option class="option" value="empr" >Empresa</option>
+                <option class="option" value="prof">Professor</option>
             </select>
             
         </div>

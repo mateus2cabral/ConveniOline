@@ -24,8 +24,8 @@
            <div class="menu-bar">
                 <div class="inner-menu-bar">
                     <ul>
-                        <a href="inicio_preg"><li>Início</li></a>
-                        <a href="visualizar_solicitacao"><li>Estágio</li></a>
+                        <a href="professor.professor"><li>Início</li></a>
+                        <a href="visualizar_solicitacao"><li>Estágios</li></a>
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
                 </div>
