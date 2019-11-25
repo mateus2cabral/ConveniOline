@@ -9,4 +9,9 @@ class professorController extends Controller
     public function show(){
         return view('professor.inicio_professor');
     }
+
+    public function enviarFormulario(){
+       return view('professor.cadastroAluno');
+    }
 }
+

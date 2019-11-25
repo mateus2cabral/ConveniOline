@@ -50,4 +50,6 @@ Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir');
 // Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
 
+//Rotas usuario professor
+Route::get('cadastro_aluno','professorController@enviarFormulario');
 Route::get('inicio_professor', 'professorController@show');

@@ -24,8 +24,8 @@
            <div class="menu-bar">
                 <div class="inner-menu-bar">
                     <ul>
-                        <a href="professor.professor"><li>Início</li></a>
-                        <a href="visualizar_solicitacao"><li>Estágios</li></a>
+                        <a href="inicio_professor"><li>Início</li></a>
+                        <a href="cadastro_aluno"><li>Estágios</li></a>
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
                 </div>
