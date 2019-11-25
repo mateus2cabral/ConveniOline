@@ -54,6 +54,10 @@
     font-size: 20px;
 }
 
+.form-submit:hover {
+    cursor: pointer;
+}
+
 .button-solicitacao {
     margin: 15px 100px 0px 110px;
     display: block;

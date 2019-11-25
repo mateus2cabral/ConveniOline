@@ -4,7 +4,7 @@
 <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/convenio__solicitacao.css'>
 
 
-echo {{ $login ?? '' }};
+<!-- echo {{ $login ?? '' }}; -->
 
     
 <div class="solicitacao">
