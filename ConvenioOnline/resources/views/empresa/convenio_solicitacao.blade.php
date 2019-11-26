@@ -8,7 +8,7 @@
 <?php
 session_start();
 
-echo $_SESSION["user"];
+// echo $_SESSION["user"];
 
 ?>
 
@@ -63,7 +63,7 @@ echo $_SESSION["user"];
             <div>
                 <div class="l-side">Áreas de interesse:</div> 
                 <div class="r-side"><input class="input-solicitacao" type="text" name="aconhecimento" required ></div>
-            </div> 
+            </div>
 
             <div class="end-solicitacao"></div>
                 

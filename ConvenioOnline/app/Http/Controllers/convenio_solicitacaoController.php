@@ -24,13 +24,13 @@ class convenio_solicitacaoController extends Controller
             }
         }
         if ($finded){
-            echo 'ja solicitou';
-            // return redirect('solicitacao')->with($login);
+            return redirect('ver_solicitacao');
+            // echo 'ja solicitou';
+            // return redirect('/ver_solicitacao')->with($login);
         } else {
             echo 'não solicitou';
             return redirect('/solicitacao');
         }
-
         
     }
 
@@ -38,8 +38,10 @@ class convenio_solicitacaoController extends Controller
         return view('empresa.convenio_solicitacao');
     }
 
-
-
+    public function ver_solicitacao() {
+        $dados_convenios = DB::collection('convenios')->get();
+        return view('empresa.status_solicitacao_empresa', compact('dados_convenios'));
+    }
 
     public function enviar_solicitacao(Request $dados) {
 
