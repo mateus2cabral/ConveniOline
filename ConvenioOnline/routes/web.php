@@ -32,6 +32,8 @@ Route::get('validar', 'convenio_solicitacaoController@validar');
 Route::get('solicitacao', 'convenio_solicitacaoController@show');
 Route::post('enviar_solicitacao', 'convenio_solicitacaoController@enviar_solicitacao');
 
+Route::get('ver_solicitacao', 'convenio_solicitacaoController@ver_solicitacao');
+
 
 // Rota para o controller "ConvenioControlller" na função inicio
 Route::get('inicio_preg', 'inicio_pregController@show');
@@ -50,4 +52,6 @@ Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir');
 // Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
 
+//Rotas usuario professor
+Route::get('cadastro_aluno','professorController@enviarFormulario');
 Route::get('inicio_professor', 'professorController@show');
