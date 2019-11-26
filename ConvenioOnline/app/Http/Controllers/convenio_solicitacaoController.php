@@ -35,13 +35,28 @@ class convenio_solicitacaoController extends Controller
     }
 
     public function show() {
-        return view('empresa.convenio_solicitacao');
+        $aconhecimento = [
+            'suporte',
+            'programador',
+            'contabeis',
+            'designer',
+            'cozinheiro',
+            'engenheiro eletrico',
+            'arquiteto',
+            'analista de dados'
+        ];
+        return view('empresa.convenio_solicitacao', compact('aconhecimento'));
     }
 
 
 
 
     public function enviar_solicitacao(Request $dados) {
+        $areas = [];
+        foreach ($dados->ckb as $dado) {
+            array_push($areas, $dado);
+        }
+
 
         $representante = $dados->representante;
         $rsocial = $dados->rsocial;
@@ -50,6 +65,7 @@ class convenio_solicitacaoController extends Controller
         $endereco = $dados->endereco;
         $cep = $dados->cep;
         $contato = $dados->contato;
+        $aconhecimento = $areas;
 
         if (($representante && $rsocial && $cnpj && $ie && $endereco && $cep && $contato)) {
             session_start();
@@ -64,9 +80,18 @@ class convenio_solicitacaoController extends Controller
                  'contato' => $dados->contato,
                  'status' => 'a',
                  'observacao' => '',
-                 'data' => date('d-m-Y'),
-                 'aconhecimento' => $dados->aconhecimento]
+                 'data' => date('d-m-Y')]
             );
+
+            foreach ($areas as $area) {
+                
+                DB::collection('aconhecimentos')->insert([
+                    'user' => $_SESSION["user"],
+                    'area' => $area
+                ]);
+            }
+            
+
 
             return redirect('/inicio_empresa');
             

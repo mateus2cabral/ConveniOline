@@ -87,3 +87,51 @@
     height: 300px;
     display: block;
 }
+
+/* Drop down */
+
+.drop_down {
+    background-color: rgb(214, 215, 218);
+    width: 530px;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid  #ccc;
+    border-radius: 6px;
+    line-height: 36px;
+    color: rgb(116, 118, 121);
+    
+}
+
+.drop_down:hover {
+    cursor: pointer;
+}
+
+.drop_down:onclick .options{
+    display: block;
+}
+
+.options {
+    display: none;
+    margin-top: 5px;
+    position: absolute;
+    background-color:  rgb(240, 241, 243);
+    width: 526px;
+    height: 150px;
+    padding: 5px;
+    line-height: 36px;
+    border-radius: 0px 0px 6px 6px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.options ul {
+    list-style-type: none;
+    margin: 4px;
+    padding: 4px;
+    
+}
+
+.options ul li:hover {
+    border-radius: 6px;
+    background-color:  rgb(206, 217, 240);
+}

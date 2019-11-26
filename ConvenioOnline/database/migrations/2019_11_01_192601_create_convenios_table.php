@@ -24,7 +24,6 @@ class CreateConveniosTable extends Migration
             $collection->strig('contato');
             $collection->enum('status', ['d', 'i', 'a']);
             $collection->strig('observacao');
-            $collection->strig('aconhecimento');
             $collection->date('data');
         });
     }

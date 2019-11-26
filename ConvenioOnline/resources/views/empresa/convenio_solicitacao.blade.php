@@ -4,16 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/convenio__solicitacao.css'>
 
 
-
-<?php
-session_start();
-
-echo $_SESSION["user"];
-
-?>
-
-
-
     
 <div class="solicitacao">
 
@@ -62,8 +52,27 @@ echo $_SESSION["user"];
 
             <div>
                 <div class="l-side">Áreas de interesse:</div> 
-                <div class="r-side"><input class="input-solicitacao" type="text" name="aconhecimento" required ></div>
-            </div> 
+                <div class="r-side">
+                    <!-- <input class="input-solicitacao" type="text" name="aconhecimento" required > -->
+                    <div class="drop_down" onclick="dropdown(dropdown_active)"> Selecione os estágios que deseja ofertar...
+                        <div class="options">
+                            <ul>
+                            @php
+                              $i = 1;
+                            @endphp
+                            
+                            @foreach ($aconhecimento as $area)
+                            
+                                <li><input type="checkbox" name="ckb[]" value="{{ $area }}">{{ $area }}</li>
+
+                            @endforeach
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript"src="js/convenio_solicitacao.js"></script> 
 
             <div class="end-solicitacao"></div>
                 
