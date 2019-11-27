@@ -55,7 +55,7 @@
                 <div class="r-side">
            
                 <!-- <input class="input-solicitacao" type="text" name="aconhecimento" required > -->
-                    <div class="drop_down" onmouseover="mostrarDD()" onmouseout="ocultarDD()"> Selecione os estágios que deseja ofertar...
+                    <div class="drop_down" onmouseover="mostrarDD()" onmouseout="ocultarDD()"> Selecione as áreas para estágio...
                         <div class="options">
                             <ul>
                             @php
@@ -64,7 +64,10 @@
                             
                             @foreach ($aconhecimento as $area)
                             
-                                <li><input type="checkbox" name="ckb[]" value="{{ $area }}">{{ $area }}</li>
+                                <li>
+                                    <input id="{{ $area }}" type="checkbox" name="ckb[]" value="{{ $area }}">
+                                    <label for="{{ $area }}">{{ $area }}</label>
+                                </li>
 
                             @endforeach
                             </ul>

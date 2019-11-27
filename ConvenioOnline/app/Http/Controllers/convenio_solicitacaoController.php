@@ -36,14 +36,14 @@ class convenio_solicitacaoController extends Controller
 
     public function show() {
         $aconhecimento = [
-            'suporte',
-            'programador',
-            'contabeis',
-            'designer',
-            'cozinheiro',
-            'engenheiro eletrico',
-            'arquiteto',
-            'analista de dados'
+            'Suporte técnico',
+            'Desenvolvimento',
+            'Contábeis',
+            'Designer',
+            'Culinária',
+            'Engenharia elétrica',
+            'Arquitetura',
+            'Análise de dados'
         ];
         return view('empresa.convenio_solicitacao', compact('aconhecimento'));
     }
