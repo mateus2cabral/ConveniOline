@@ -4,19 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/convenio__solicitacao.css'>
 
 
-<<<<<<< HEAD
-=======
-
-<?php
-session_start();
-
-// echo $_SESSION["user"];
-
-?>
-
-
-
->>>>>>> d545149dc7e8404ba2225224c1fbc8c63064368c
     
 <div class="solicitacao">
 
@@ -68,7 +55,7 @@ session_start();
                 <div class="r-side">
            
                 <!-- <input class="input-solicitacao" type="text" name="aconhecimento" required > -->
-                    <div class="drop_down" onclick="dropdown(dropdown_active)"> Selecione os estágios que deseja ofertar...
+                    <div class="drop_down" onmouseover="mostrarDD()" onmouseout="ocultarDD()"> Selecione os estágios que deseja ofertar...
                         <div class="options">
                             <ul>
                             @php

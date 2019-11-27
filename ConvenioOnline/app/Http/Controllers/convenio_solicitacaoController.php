@@ -50,7 +50,31 @@ class convenio_solicitacaoController extends Controller
 
     public function ver_solicitacao() {
         $dados_convenios = DB::collection('convenios')->get();
-        return view('empresa.status_solicitacao_empresa', compact('dados_convenios'));
+        $aconhecimentos = DB::collection('aconhecimentos')->get();
+        $areas = [];
+        $convenio = 0;
+        session_start();
+        foreach ($dados_convenios as $dados) {
+
+            if ($dados['login'] === $_SESSION['user']) {
+                $convenio = $dados;
+            }
+        }
+
+        foreach ($aconhecimentos as $area) {
+
+            if ($area['user'] === $_SESSION['user']) {
+                array_push($areas, $area['area']);
+            }
+        }
+        array_push($convenio, $areas);
+
+        // foreach ($convenio as $key => $value) {
+        // echo $key. " | ";
+        // }
+
+        // echo $convenio['0'][0] ;
+        return view('empresa.status_solicitacao_empresa', compact('convenio'));
     }
 
     public function enviar_solicitacao(Request $dados) {
@@ -94,7 +118,8 @@ class convenio_solicitacaoController extends Controller
             }
             
 
-
+            // echo "Solicitação enviada com sucesso!";
+            
             return redirect('/inicio_empresa');
             
         } else {

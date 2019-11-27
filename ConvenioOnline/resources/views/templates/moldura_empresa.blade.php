@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="all-white-menu">
+            <div class="all-white-menu" >
                 @yield('content')
             </div>
 

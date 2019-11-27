@@ -23,9 +23,7 @@ class visualizar_solicitacao_pregController extends Controller
         DB::collection('convenios')->where('_id', $dados->id)->update(['status' => 'i']);
         DB::collection('convenios')->where('_id', $dados->id)->update(['observacao' => $dados->modal_input]);
 
-        
         return redirect('/visualizar_solicitacao');
-    
     }
 
     public function deferir($id) {
