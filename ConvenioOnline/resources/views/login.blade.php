@@ -1,6 +1,20 @@
 @extends('templates.moldura')
 @section('content')
 
+<head>
+    <script type="text/javascript">
+        function mask(src, mascara) {
+            var campo = src.value.length;
+            var saida = mascara.substring(0,1);
+            var texto = mascara.substring(campo);
+            if(texto.substring(0,1) != saida) {
+                src.value += texto.substring(0,1);
+            }
+        }
+    </script>
+</head>
+
+
     <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
 
 <div class="form">
@@ -10,11 +24,11 @@
 
         <div class="user-field">
             <div class="left-side" >Usuário:</div> 
-            <div  class="right-side"><input type="text" name='usuario' autofocus required></div>
+            <div  class="right-side"><input maxlength="15" minlength="5" type="text" name='usuario' autofocus required></div>
         </div>
         <div class="password-field">
             <div class="left-side">Senha:</div> 
-            <div class="right-side"><input type="password" name="senha" required></div>
+            <div class="right-side"><input maxlength="15" minlength="5"  type="password" name="senha" required></div>
         </div>
 
         <div class="form-section"></div>

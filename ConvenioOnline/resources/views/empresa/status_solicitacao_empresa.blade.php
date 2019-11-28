@@ -83,7 +83,7 @@
             <div class="content">
 
                 @if( $convenio['status'] === "a")
-                    Aguardando analise
+                    Em análise
                 @endif
 
                 @if( $convenio['status'] === "i")
@@ -98,7 +98,7 @@
 
         <div class="panel_block_50">
             <div class="label">
-                Areas ofertadas
+                Áreas ofertadas
             </div>
             <div class="content">
                 @for ($i = 0; $i < sizeof($convenio['0']); $i++)
