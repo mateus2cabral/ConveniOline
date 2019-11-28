@@ -31,12 +31,12 @@
             
             <div>
                 <div class="l-side">Nome do Representante:</div> 
-                <div class="r-side"><input maxlength="500" minlength="1" class="input-solicitacao" type="text" name="representante" autofocus required></div>
+                <div class="r-side"><input maxlength="40" minlength="1" class="input-solicitacao" type="text" name="representante" autofocus required></div>
             </div>
             
             <div>
                 <div class="l-side">Razão Social:</div> 
-                <div class="r-side"><input maxlength="500" minlength="1" class="input-solicitacao" type="text" name="rsocial" required></div>
+                <div class="r-side"><input maxlength="40" minlength="1" class="input-solicitacao" type="text" name="rsocial" required></div>
             </div>
             
             <div>
@@ -51,7 +51,7 @@
             
             <div>
                 <div class="l-side">Endereço:</div> 
-                <div class="r-side"><input maxlength="500"  minlength="1" class="input-solicitacao" type="text" name="endereco" required></div>
+                <div class="r-side"><input maxlength="40"  minlength="1" class="input-solicitacao" type="text" name="endereco" required></div>
             </div>
             
             <div>

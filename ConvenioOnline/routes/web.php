@@ -15,46 +15,60 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('login', 'loginController@show');
-Route::post('logar', 'loginController@logar');
+// ROTAS PARA QUEM NÃO ESTA LOGADO
+    Route::get('login', 'loginController@show');
+    Route::post('logar', 'loginController@logar');
 
-Route::get('cadastro', 'loginController@cadastro');
-Route::post('cadastro_empresa', 'cadastro_usuarioController@cadastro_empresa');
+    Route::get('cadastro', 'loginController@cadastro');
+    Route::post('cadastro_empresa', 'cadastro_usuarioController@cadastro_empresa');
 
-Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios');
-Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario');
-Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario');
+    
 
+// ROTAS PARA QUEM ESTA LOGADO
+    // ROTAS REFERENTES A PREG
+        // ABA INICIO
+            Route::get('inicio_preg', 'inicio_pregController@show');
 
-// Rota para o controller "ConvenioControlller" na função logado_formulario
-Route::get('validar', 'convenio_solicitacaoController@validar');
+        // ABA SOLICITAÇÕES
+            Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes');
+            Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir');
+            Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir');
 
-Route::get('solicitacao', 'convenio_solicitacaoController@show');
-Route::post('enviar_solicitacao', 'convenio_solicitacaoController@enviar_solicitacao');
-
-Route::get('ver_solicitacao', 'convenio_solicitacaoController@ver_solicitacao');
-
-
-// Rota para o controller "ConvenioControlller" na função inicio
-Route::get('inicio_preg', 'inicio_pregController@show');
-
-// Rota para o controller "ConvenioControlller" na função inicio
-Route::get('inicio_empresa', 'inicio_empresaController@show');
-
-//Rotas usuario professor
-Route::get('inicio_professor', 'inicio_professorController@show');
-Route::get('nova_indicacao', 'nova_indicacaoController@show');
-Route::get('minhas_indicacoes', 'minhas_indicacoesController@show');
+        // ABA USUÁRIOS
+            Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios');
+            Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario');
+            Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario');
+    
 
 
 
-// Rota para o controller "ConvenioControlller" na função visualizar_solicitacao
-Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes');
-Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir');
-// Route::get('indeferir/{id}/{observacao}', 'visualizar_solicitacao_pregController@indeferir');
-Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir');
+    // ROTAS REFERENTES A EMPRESAS
+        // ABA INICIO
+            Route::get('inicio_empresa', 'inicio_empresaController@show');
 
-// Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
-Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
+        // ABA CONVÊNIO
+            // ANTES DE SOLICITADO
+                Route::get('solicitacao', 'convenio_solicitacaoController@show');
+                Route::post('enviar_solicitacao', 'convenio_solicitacaoController@enviar_solicitacao');
+
+            // APÓS SOLICITADO
+                Route::get('validar', 'convenio_solicitacaoController@validar');
+                Route::get('ver_solicitacao', 'convenio_solicitacaoController@ver_solicitacao');
+
+            // NÃO UTILIZADO
+                Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
+
+
+
+    // ROTAS REFERENTES A PROFESSORES
+        // ABA INICIO
+            Route::get('inicio_professor', 'inicio_professorController@show');
+
+        // ABA NOVA INDICAÇÃO
+            Route::get('nova_indicacao', 'nova_indicacaoController@show');
+
+        // ABA MINHAS INDICAÇÕES
+            Route::get('minhas_indicacoes', 'minhas_indicacoesController@show');
+
 
 
