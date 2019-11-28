@@ -4,14 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class professorController extends Controller
+class inicio_professorController extends Controller
 {
     public function show(){
         return view('professor.inicio_professor');
     }
 
-    public function enviarFormulario(){
-       return view('professor.cadastroAluno');
-    }
 }
 

@@ -25,7 +25,14 @@
                 <div class="inner-menu-bar">
                     <ul>
                         <a href="inicio_professor"><li>Início</li></a>
-                        <a href="cadastro_aluno"><li>Estágios</li></a>
+                        <li class="drop_down">Estágios
+                            <div class="options">
+                                <ul>
+                                    <a href="minhas_indicacoes"><li>Minhas indicações</li></a>
+                                    <a href="nova_indicacao"><li>Nova indicação</li></a>
+                                </ul>
+                            </div>
+                        </li>    
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
                 </div>

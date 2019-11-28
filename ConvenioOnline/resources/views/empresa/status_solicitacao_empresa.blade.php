@@ -80,18 +80,27 @@
             <div class="label">
                 Status
             </div>
-            <div class="content">
+            <div class="content" id="content_status">
 
                 @if( $convenio['status'] === "a")
                     Em análise
+                    <script>    
+                        document.getElementById('content_status').style.backgroundColor = 'rgb(125, 184, 231)'
+                    </script>
                 @endif
 
                 @if( $convenio['status'] === "i")
                     Pedido indeferido
+                    <script>    
+                        document.getElementById('content_status').style.backgroundColor = 'rgb(240, 119, 119)'
+                    </script>
                 @endif
 
                 @if( $convenio['status'] === "d")
                     Pedido deferido
+                    <script>    
+                        document.getElementById('content_status').style.backgroundColor = 'rgb(116, 230, 135)'
+                    </script>
                 @endif
             </div>
         </div>

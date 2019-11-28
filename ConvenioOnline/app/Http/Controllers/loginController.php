@@ -45,7 +45,7 @@ class loginController extends Controller
                         // return redirect('/inicio_empresa');
         
                     }
-                    if ($user["tipo"]== 'prof'){
+                    if ($user["tipo"] == 'prof'){
                         $_SESSION["tipo"]= 'prof';
                         $finded = true;
                         

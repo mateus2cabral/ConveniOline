@@ -81,3 +81,49 @@ body {
     text-align: center;
     padding: 5px 10px 5px 10px !important;
 }
+
+/* Drop Down */
+
+.drop_down {
+    cursor: pointer;
+}
+
+.options {
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    /* margin-top: 2px; */
+    display: none;
+    border: 1px solid rgb(199, 198, 198);
+    /* border-radius: 0px 0px 8px 8px; */
+  
+}
+
+a {
+    text-decoration: none;
+}
+
+.options ul{
+    
+    padding: 0px;
+}
+
+
+.options ul li{
+    display: block;
+    padding: 6px;
+
+    /* border-radius: 0px 0px 8px 8px; */
+}
+
+.options ul li:hover{
+    background-color: rgb(230, 229, 247);
+}
+
+.drop_down:hover .options{
+
+    display: block;
+}
+
+
+

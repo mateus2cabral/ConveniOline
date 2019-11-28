@@ -31,12 +31,12 @@
             
             <div>
                 <div class="l-side">Nome do Representante:</div> 
-                <div class="r-side"><input maxlength="40" minlength="15" class="input-solicitacao" type="text" name="representante" autofocus required></div>
+                <div class="r-side"><input maxlength="500" minlength="1" class="input-solicitacao" type="text" name="representante" autofocus required></div>
             </div>
             
             <div>
                 <div class="l-side">Razão Social:</div> 
-                <div class="r-side"><input maxlength="20" minlength="5" class="input-solicitacao" type="text" name="rsocial" required></div>
+                <div class="r-side"><input maxlength="500" minlength="1" class="input-solicitacao" type="text" name="rsocial" required></div>
             </div>
             
             <div>
@@ -51,17 +51,17 @@
             
             <div>
                 <div class="l-side">Endereço:</div> 
-                <div class="r-side"><input maxlength="50"class="input-solicitacao" type="text" name="endereco" required></div>
+                <div class="r-side"><input maxlength="500"  minlength="1" class="input-solicitacao" type="text" name="endereco" required></div>
             </div>
             
             <div>
                 <div class="l-side">CEP:</div> 
-                <div class="r-side"><input onkeypress="mask(this,'#####-###')" maxlength="9" class="input-solicitacao" type="text" name="cep" required></div>
+                <div class="r-side"><input onkeypress="mask(this,'#####-###')" maxlength="9"  minlength="9" class="input-solicitacao" type="text" name="cep" required></div>
             </div> 
 
             <div>
                 <div class="l-side">Contato:</div> 
-                <div class="r-side"><input onkeypress="mask(this,'## #####-####')" maxlength="13" class="input-solicitacao" type="text" name="contato" required ></div>
+                <div class="r-side"><input onkeypress="mask(this,'## #####-####')" maxlength="13"  minlength="13" class="input-solicitacao" type="text" name="contato" required ></div>
             </div>
 
             <div>

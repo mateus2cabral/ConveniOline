@@ -41,17 +41,20 @@ Route::get('inicio_preg', 'inicio_pregController@show');
 // Rota para o controller "ConvenioControlller" na função inicio
 Route::get('inicio_empresa', 'inicio_empresaController@show');
 
+//Rotas usuario professor
+Route::get('inicio_professor', 'inicio_professorController@show');
+Route::get('nova_indicacao', 'nova_indicacaoController@show');
+Route::get('minhas_indicacoes', 'minhas_indicacoesController@show');
+
+
+
 // Rota para o controller "ConvenioControlller" na função visualizar_solicitacao
 Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes');
 Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir');
 // Route::get('indeferir/{id}/{observacao}', 'visualizar_solicitacao_pregController@indeferir');
 Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir');
 
-
-
 // Rota para o controller "ConvenioControlller" na função detalhe_solicitacao
 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
 
-//Rotas usuario professor
-Route::get('cadastro_aluno','professorController@enviarFormulario');
-Route::get('inicio_professor', 'professorController@show');
+
