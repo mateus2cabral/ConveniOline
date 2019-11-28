@@ -69,11 +69,7 @@ class convenio_solicitacaoController extends Controller
         }
         array_push($convenio, $areas);
 
-        // foreach ($convenio as $key => $value) {
-        // echo $key. " | ";
-        // }
 
-        // echo $convenio['0'][0] ;
         return view('empresa.status_solicitacao_empresa', compact('convenio'));
     }
 
