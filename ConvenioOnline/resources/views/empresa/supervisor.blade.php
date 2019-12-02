@@ -33,6 +33,7 @@
                     <th>Nome</th>
                     <th>Usuário</th>
                     <th>E-mail</th>
+                    <th>Área</th>
                 </tr>
                 
                
@@ -44,6 +45,7 @@
                         <td>{{ $supervisor['nome'] }}</td>
                         <td>{{ $supervisor['usuario'] }}</td>
                         <td>{{ $supervisor['email'] }}</td>
+                        <td>{{ $supervisor['area'] }}</td>
                 
                 @endforeach
 

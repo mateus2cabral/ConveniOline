@@ -31,7 +31,17 @@ class cadastro_supervisorController extends Controller
 
     
     public function cadastro_supervisor(){  
-        return view('empresa.cadastro_supervisor');
+        $aconhecimentos = DB::collection('aconhecimentos')->get();
+        $aconhecimento = [];
+
+        foreach ($aconhecimentos as $area) {
+
+            if ($area['user'] === $_SESSION['user']) {
+                array_push($aconhecimento, $area['area']);
+            }
+        }
+
+        return view('empresa.cadastro_supervisor', compact('aconhecimento'));
     }
 
     
@@ -42,6 +52,7 @@ class cadastro_supervisorController extends Controller
         $usuario = $dados->usuario;
         $senha = $dados->senha;
         $conf_senha = $dados->conf_senha;
+        $area = $dados->area;
         
         $tipo = 'super';
 
@@ -67,7 +78,7 @@ class cadastro_supervisorController extends Controller
                     // session_start();
                     DB::collection('logins')->insert(
                             ['user_empr' => $_SESSION['user'],
-                            // 'area' => $dados->area,
+                            'area' => $dados->area,
                             'nome' => $dados->nome,
                             'email' => $dados->email,
                             'usuario' => $dados->usuario,

@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>ConvênioOnline - UESPI</title>
+    <title>ConvêniOnline - UESPI</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/template/moldura_empresa.css'>
 
@@ -21,7 +21,7 @@
             </div>
             <a href="inicio_empresa">
                 <div class="title">
-                    ConvênioOnline
+                    ConvêniOnline
                 </div>
             </a>
        </header>

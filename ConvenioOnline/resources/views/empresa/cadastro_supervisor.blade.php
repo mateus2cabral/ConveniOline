@@ -90,6 +90,35 @@
                 <div class="r-side"><input class="input-solicitacao" type="password" name="conf_senha" required></div>
             </div>
 
+            <div>
+                <div class="l-side">Áreas de interesse:</div> 
+                <div class="r-side">
+           
+                <!-- <input class="input-solicitacao" type="text" name="aconhecimento" required > -->
+                    <div class="drop_down" onmouseover="mostrarDD()" onmouseout="ocultarDD()"> Selecione as áreas para estágio...
+                        <div class="options">
+                            <ul>
+                            @php
+                              $i = 1;
+                            @endphp
+                            
+                            @foreach ($aconhecimento as $area)
+                            
+                                <li>
+                                    <input id="{{ $area }}" type="radio" name="area" value="{{ $area }}">
+                                    <label for="{{ $area }}">{{ $area }}</label>
+                                </li>
+
+                            @endforeach
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript"src="js/cadastro_supervisor.js"></script> 
+
+
             <div class="end-solicitacao"></div>
                 
             <div class="form-fields-solicitacao"></div>
