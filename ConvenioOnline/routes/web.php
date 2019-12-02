@@ -72,3 +72,23 @@ use Illuminate\Support\Facades\Route;
 
 
 
+            // ROTAS REFERENTES A SUPERVISOR
+        // ABA INICIO
+        // Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
+        Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
+
+        Route::get('supervisionar', 'estagiariosController@show')->middleware('checkSupervisor');
+
+        
+
+        // ABA SOLICITAÇÕES
+            // Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes')->middleware('checkPreg');
+            // Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir')->middleware('checkPreg');
+            // Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir')->middleware('checkPreg');
+
+        // ABA USUÁRIOS
+            // Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios')->middleware('checkProfessor');
+            // Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario')->middleware('checkProfessor');
+            // Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario')->middleware('checkProfessor');
+    
+

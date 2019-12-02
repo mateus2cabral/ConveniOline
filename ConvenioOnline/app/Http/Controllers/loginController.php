@@ -52,7 +52,13 @@ class loginController extends Controller
                         $finded = true;
                         
                         return redirect('/inicio_professor');
-                    } 
+                    }
+                    if ($user["tipo"] == 'super'){
+                        $_SESSION["tipo"]= 'super';
+                        $finded = true;
+                        
+                        return redirect('/inicio_supervisor');
+                    }
                 } 
             } 
 
