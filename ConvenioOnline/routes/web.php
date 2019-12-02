@@ -76,8 +76,13 @@ use Illuminate\Support\Facades\Route;
         // ABA INICIO
         // Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
         Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
-
         Route::get('supervisionar', 'estagiariosController@show')->middleware('checkSupervisor');
+
+        
+        // ABA SUPERVISORES
+        Route::get('supervisores', 'cadastro_supervisorController@mostra_supervisores')->middleware('checkEmpresa');
+        Route::get('cadastro_supervisor', 'cadastro_supervisorController@cadastro_supervisor')->middleware('checkEmpresa');
+        Route::post('cadastrar_supervisor', 'cadastro_supervisorController@cadastrar_supervisor')->middleware('checkEmpresa');
 
         
 
