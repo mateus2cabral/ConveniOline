@@ -9,8 +9,10 @@ class loginController extends Controller
 {
     public function show() {
         session_start();
-        unset($_SESSION["user"]);
-        unset($_SESSION["tipo"]);
+
+        $_SESSION["user"] = "";
+        $_SESSION["tipo"] = "";
+
         return view('login');
     }
 

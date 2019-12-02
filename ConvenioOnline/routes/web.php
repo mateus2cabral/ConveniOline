@@ -27,33 +27,33 @@ use Illuminate\Support\Facades\Route;
 // ROTAS PARA QUEM ESTA LOGADO
     // ROTAS REFERENTES A PREG
         // ABA INICIO
-            Route::get('inicio_preg', 'inicio_pregController@show');
+            Route::get('inicio_preg', 'inicio_pregController@show')->middleware('checkPreg');
 
         // ABA SOLICITAÇÕES
-            Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes');
-            Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir');
-            Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir');
+            Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes')->middleware('checkPreg');
+            Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir')->middleware('checkPreg');
+            Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir')->middleware('checkPreg');
 
         // ABA USUÁRIOS
-            Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios');
-            Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario');
-            Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario');
+            Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios')->middleware('checkPreg');
+            Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario')->middleware('checkPreg');
+            Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario')->middleware('checkPreg');
     
 
 
 
-    // ROTAS REFERENTES A EMPRESAS
+    // ROTAS REFERENTES A EMPRESAS 
         // ABA INICIO
-            Route::get('inicio_empresa', 'inicio_empresaController@show');
+            Route::get('inicio_empresa', 'inicio_empresaController@show')->middleware('checkEmpresa');
 
         // ABA CONVÊNIO
             // ANTES DE SOLICITADO
-                Route::get('solicitacao', 'convenio_solicitacaoController@show');
-                Route::post('enviar_solicitacao', 'convenio_solicitacaoController@enviar_solicitacao');
+                Route::get('solicitacao', 'convenio_solicitacaoController@show')->middleware('checkEmpresa');
+                Route::post('enviar_solicitacao', 'convenio_solicitacaoController@enviar_solicitacao')->middleware('checkEmpresa');
 
             // APÓS SOLICITADO
-                Route::get('validar', 'convenio_solicitacaoController@validar');
-                Route::get('ver_solicitacao', 'convenio_solicitacaoController@ver_solicitacao');
+                Route::get('validar', 'convenio_solicitacaoController@validar')->middleware('checkEmpresa');
+                Route::get('ver_solicitacao', 'convenio_solicitacaoController@ver_solicitacao')->middleware('checkEmpresa');
 
             // NÃO UTILIZADO
                 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
@@ -62,13 +62,13 @@ use Illuminate\Support\Facades\Route;
 
     // ROTAS REFERENTES A PROFESSORES
         // ABA INICIO
-            Route::get('inicio_professor', 'inicio_professorController@show');
+            Route::get('inicio_professor', 'inicio_professorController@show')->middleware('checkProfessor');
 
         // ABA NOVA INDICAÇÃO
-            Route::get('nova_indicacao', 'nova_indicacaoController@show');
+            Route::get('nova_indicacao', 'nova_indicacaoController@show')->middleware('checkProfessor');
 
         // ABA MINHAS INDICAÇÕES
-            Route::get('minhas_indicacoes', 'minhas_indicacoesController@show');
+            Route::get('minhas_indicacoes', 'minhas_indicacoesController@show')->middleware('checkProfessor');
 
 
 

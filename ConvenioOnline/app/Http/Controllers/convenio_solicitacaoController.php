@@ -10,11 +10,10 @@ class convenio_solicitacaoController extends Controller
 {
 
     public function validar() {
-        session_start();
+        // session_start();
         $convenios = DB::collection('convenios')->get();
         $finded = false;
         foreach ($convenios as $convenio) {
-            // echo $convenio["login"];
             if ($convenio['login'] === $_SESSION["user"]) {
                 
                 $finded = true;
@@ -25,10 +24,9 @@ class convenio_solicitacaoController extends Controller
         }
         if ($finded){
             return redirect('ver_solicitacao');
-            // echo 'ja solicitou';
-            // return redirect('/ver_solicitacao')->with($login);
+          
         } else {
-            echo 'não solicitou';
+
             return redirect('/solicitacao');
         }
         
@@ -53,7 +51,7 @@ class convenio_solicitacaoController extends Controller
         $aconhecimentos = DB::collection('aconhecimentos')->get();
         $areas = [];
         $convenio = 0;
-        session_start();
+        // ;session_start()
         foreach ($dados_convenios as $dados) {
 
             if ($dados['login'] === $_SESSION['user']) {
@@ -90,7 +88,7 @@ class convenio_solicitacaoController extends Controller
         $aconhecimento = $areas;
 
         if (($representante && $rsocial && $cnpj && $ie && $endereco && $cep && $contato)) {
-            session_start();
+            // session_start();
             DB::collection('convenios')->insert(
                 ['login' => $_SESSION["user"],
                  'representante' => $dados->representante,
