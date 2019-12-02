@@ -105,7 +105,7 @@
                             @foreach ($aconhecimento as $area)
                             
                                 <li>
-                                    <input id="{{ $area }}" type="radio" name="area" value="{{ $area }}">
+                                    <input id="{{ $area }}" type="radio" name="area" value="{{ $area }}" required>
                                     <label for="{{ $area }}">{{ $area }}</label>
                                 </li>
 

@@ -39,22 +39,26 @@
                 </tr>
                 
                 @foreach ($dados as $dado)
+                        @if ($dado['tipo'] === 'preg' || $dado['tipo'] === 'empr' || $dado['tipo'] === 'prof')
                     
                         <tr align="center">
                         <td>{{ $dado['nome'] }}</td>
                         <td>{{ $dado['usuario'] }}</td>
                         <td>{{ $dado['email'] }}</td>
 
-                        @if ($dado['tipo'] === 'preg')
-                            <td>PREG</td>
-                        @endif
 
-                        @if ($dado['tipo'] === 'empr')
-                            <td>EMPRESA</td>
-                        @endif
+                            @if ($dado['tipo'] === 'preg')
+                                <td>PREG</td>
+                            @endif
 
-                        @if ($dado['tipo'] === 'prof')
-                            <td>PROFESSOR</td>
+                            @if ($dado['tipo'] === 'empr')
+                                <td>EMPRESA</td>
+                            @endif
+
+                            @if ($dado['tipo'] === 'prof')
+                                <td>PROFESSOR</td>
+                            @endif
+
                         @endif
                 
                 @endforeach

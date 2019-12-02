@@ -89,15 +89,15 @@ class cadastro_supervisorController extends Controller
                         return redirect('/supervisores');
                         
                     }
-                    else {return redirect('/cadastro');}
+                    else {return redirect('/cadastro_supervisor');}
                     
                 }
                     
-                else {return redirect('/cadastro');}
+                else {return redirect('/cadastro_supervisor');}
                     
         } // Fim if verifica se todos campos foram preenchidos
 
-        else {return redirect('/cadastro');}
+        else {return redirect('/cadastro_supervisor');}
             
     } // Fim da função de cadastro da empresa
 
