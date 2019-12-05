@@ -103,6 +103,10 @@ class convenio_solicitacaoController extends Controller
                  'data' => date('d-m-Y')]
             );
 
+            DB::collection('logins')->where('usuario', $_SESSION['user'])->update(
+                ['empresa' => $dados->rsocial]
+                );
+
             foreach ($areas as $area) {
                 
                 DB::collection('aconhecimentos')->insert([

@@ -74,17 +74,24 @@ class cadastro_supervisorController extends Controller
                 
                 if ($senha === $conf_senha) {
 
-
+                    $usuarios = DB::collection('logins')->get(); 
+                        foreach ($usuarios as $usuario) {
+                            if ($usuario['usuario'] === $_SESSION['user']) {
+                                $empresa = $usuario['empresa'];
+                            }
+                        }
+                    
                     // session_start();
                     DB::collection('logins')->insert(
-                            ['user_empr' => $_SESSION['user'],
-                            'area' => $dados->area,
-                            'nome' => $dados->nome,
-                            'email' => $dados->email,
-                            'usuario' => $dados->usuario,
-                            'senha' => $dados->senha,
-                            'tipo' => $tipo
-                            ]
+                        ['user_empr' => $_SESSION['user'],
+                        'area' => $dados->area,
+                        'nome' => $dados->nome,
+                        'email' => $dados->email,
+                        'usuario' => $dados->usuario,
+                        'senha' => $dados->senha,
+                        'tipo' => $tipo,
+                        'empresa' => $empresa
+                        ]
                         );
                         return redirect('/supervisores');
                         

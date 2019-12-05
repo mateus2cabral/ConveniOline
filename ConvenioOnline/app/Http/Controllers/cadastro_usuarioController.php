@@ -54,7 +54,8 @@ class cadastro_usuarioController extends Controller
                             'email' => $dados->email,
                             'usuario' => $dados->usuario,
                             'senha' => $dados->senha,
-                            'tipo' => $tipo
+                            'tipo' => $tipo,
+                            'empresa' => ''
                             ]
                         );
                         return redirect('/login');
@@ -109,7 +110,8 @@ class cadastro_usuarioController extends Controller
                         'email' => $dados->email,
                         'usuario' => $dados->usuario,
                         'senha' => $dados->senha,
-                        'tipo' => $dados->tipo
+                        'tipo' => $dados->tipo,
+                        'empresa' => ''
                         ]
                     );
         

@@ -7,11 +7,9 @@
     <div class="visualizar">
 
         <div class="form-title-visualizar">
-            Frequência (Jeffrey Preston Bezos)
+            Frequência ({{$estagiario['nome']}})
         </div>
 
-        <!-- <div align="center">LISTAGEM <br><br><strong> NÃO SINCRONIZADA</strong> <br><br> AO BANCO DE DADOS</div> -->
-        
 
         <div class="form-fields-visualizar"></div>
 
@@ -60,7 +58,10 @@
                 </tr>
             
             </table>
+            <a href="supervisionar">
             <input class="form-submit" type="submit" value="Salvar">
+            </a>
+            
 
         <div class="end-visualizar"></div>
         
