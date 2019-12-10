@@ -10,6 +10,8 @@
             Frequência ({{$estagiario['nome']}})
         </div>
 
+        
+
 
         <div class="form-fields-visualizar"></div>
 
@@ -23,35 +25,38 @@
                 </tr>
                 
                 <tr align="center">
-                    <td>02/12/2019</td>
+                    
+                    <td>{{$datas['segunda']}}</td>
+
                     <td>Segunda-feira</td>
                     <td><input class="radio-frequencia" type="radio" name="segunda"></td>
                     <td><input class="radio-frequencia" type="radio" name="segunda"></td>
+
                 </tr>
 
                 <tr align="center">
-                    <td>03/12/2019</td>
+                    <td>{{$datas['terca']}}</td>
                     <td>Terça-feira</td>
                     <td><input class="radio-frequencia" type="radio" name="terca"></td>
                     <td><input class="radio-frequencia" type="radio" name="terca"></td>
                 </tr>
 
                 <tr align="center">
-                    <td>04/12/2019</td>
+                    <td>{{$datas['quarta']}}</td>
                     <td>Quarta-feira</td>
                     <td><input class="radio-frequencia" type="radio" name="quarta"></td>
                     <td><input class="radio-frequencia" type="radio" name="quarta"></td>
                 </tr>
 
                 <tr align="center">
-                    <td>05/12/2019</td>
+                    <td>{{$datas['quinta']}}</td>
                     <td>Quinta-feira</td>
                     <td><input class="radio-frequencia" type="radio" name="quinta"></td>
                     <td><input class="radio-frequencia" type="radio" name="quinta"></td>
                 </tr>
 
                 <tr align="center">
-                    <td>06/12/2019</td>
+                    <td>{{$datas['sexta']}}</td>
                     <td>Sexta-feira</td>
                     <td><input class="radio-frequencia" type="radio" name="sexta"></td>
                     <td><input class="radio-frequencia" type="radio" name="sexta"></td>

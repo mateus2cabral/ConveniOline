@@ -29,6 +29,7 @@
                         <a href="inicio_preg"><li>Início</li></a>
                         <a href="visualizar_solicitacao"><li>Solicitações</li></a>
                         <a href="usuarios"><li>Usuários</li></a>
+                        <a href="preg_estagio"><li>Termos de Estagio</li></a>
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
                 </div>

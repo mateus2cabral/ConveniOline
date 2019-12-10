@@ -38,7 +38,9 @@ use Illuminate\Support\Facades\Route;
             Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios')->middleware('checkPreg');
             Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario')->middleware('checkPreg');
             Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario')->middleware('checkPreg');
-    
+        //ABA ESTAGIO
+            //LISTA TERMOS DE ESTAGIO
+            Route::get('preg_estagio','estagio_pregController@show')->middleware('checkPreg');
 
 
 
@@ -57,8 +59,9 @@ use Illuminate\Support\Facades\Route;
 
             // NÃO UTILIZADO
                 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
-
-
+        //ABA ESTAGIO
+            //LISTA TERMOS DE ESTAGIO
+                Route::get('preg_estagio','estagio_pregController@show')->middleware();
 
     // ROTAS REFERENTES A PROFESSORES
         // ABA INICIO
@@ -73,11 +76,7 @@ use Illuminate\Support\Facades\Route;
 
             
 
-        // ABA MINHAS INDICAÇÕES
-            Route::get('minhas_indicacoes', 'minhas_indicacoesController@show')->middleware('checkProfessor');
-
-
-
+        
             // ROTAS REFERENTES A SUPERVISOR
         // ABA INICIO
         // Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
