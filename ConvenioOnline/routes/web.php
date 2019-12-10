@@ -78,7 +78,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('supervisionar', 'estagiariosController@show')->middleware('checkSupervisor');
         // Route::get('frequencia', 'estagiariosController@frequencia')->middleware('checkSupervisor');
         Route::post('aluno_frequencia', 'estagiariosController@aluno_frequencia')->middleware('checkSupervisor');
-
+        Route::post('salvar_frequencia', 'estagiariosController@salvar_frequencia')->middleware('checkSupervisor');
         
         // ABA SUPERVISORES
         Route::get('supervisores', 'cadastro_supervisorController@mostra_supervisores')->middleware('checkEmpresa');

@@ -12,60 +12,70 @@
 
         
 
-
         <div class="form-fields-visualizar"></div>
 
-            <table align="center">
+            <form method="POST" action="salvar_frequencia">
+                {{csrf_field() }}
 
-                <tr>
-                    <th>Data</th>
-                    <th>Dia da semana</th>
-                    <th>Presença</th>
-                    <th>Falta</th>
-                </tr>
-                
-                <tr align="center">
+                <input type="hidden" name="nome_estagiario" value="{{ $estagiario['nome'] }}">
+                <input type="hidden" name="inicio_semana" value="{{$datas['segunda']}}">
+                <table align="center">
+
+                    <tr>
+                        <th>Data</th>
+                        <th>Dia da semana</th>
+                        <th>Presença</th>
+                        <th>Falta</th>
+                    </tr>
                     
-                    <td>{{$datas['segunda']}}</td>
+                    <tr align="center">
+                        
+                        <td>{{$datas['segunda']}}</td>
 
-                    <td>Segunda-feira</td>
-                    <td><input class="radio-frequencia" type="radio" name="segunda"></td>
-                    <td><input class="radio-frequencia" type="radio" name="segunda"></td>
+                        <td>Segunda-feira</td>
+                        <input type="hidden" name="data_segunda" value="{{$datas['segunda']}}">
+                        <td><input class="radio-frequencia" type="radio" name="segunda" checked></td>
+                        <td><input class="radio-frequencia" type="radio" name="segunda" value='of'></td>
 
-                </tr>
+                    </tr>
 
-                <tr align="center">
-                    <td>{{$datas['terca']}}</td>
-                    <td>Terça-feira</td>
-                    <td><input class="radio-frequencia" type="radio" name="terca"></td>
-                    <td><input class="radio-frequencia" type="radio" name="terca"></td>
-                </tr>
+                    <tr align="center">
+                        <td>{{$datas['terca']}}</td>
+                        <td>Terça-feira</td>
+                        <input type="hidden" name="data_terca" value="{{$datas['terca']}}">
+                        <td><input class="radio-frequencia" type="radio" name="terca" checked></td>
+                        <td><input class="radio-frequencia" type="radio" name="terca" value='of'></td>
+                    </tr>
 
-                <tr align="center">
-                    <td>{{$datas['quarta']}}</td>
-                    <td>Quarta-feira</td>
-                    <td><input class="radio-frequencia" type="radio" name="quarta"></td>
-                    <td><input class="radio-frequencia" type="radio" name="quarta"></td>
-                </tr>
+                    <tr align="center">
+                        <td>{{$datas['quarta']}}</td>
+                        <td>Quarta-feira</td>
+                        <input type="hidden" name="data_quarta" value="{{$datas['quarta']}}">
+                        <td><input class="radio-frequencia" type="radio" name="quarta" checked></td>
+                        <td><input class="radio-frequencia" type="radio" name="quarta" value='of'></td>
+                    </tr>
 
-                <tr align="center">
-                    <td>{{$datas['quinta']}}</td>
-                    <td>Quinta-feira</td>
-                    <td><input class="radio-frequencia" type="radio" name="quinta"></td>
-                    <td><input class="radio-frequencia" type="radio" name="quinta"></td>
-                </tr>
+                    <tr align="center">
+                        <td>{{$datas['quinta']}}</td>
+                        <td>Quinta-feira</td>
+                        <input type="hidden" name="data_quinta" value="{{$datas['quinta']}}">
+                        <td><input class="radio-frequencia" type="radio" name="quinta" checked></td>
+                        <td><input class="radio-frequencia" type="radio" name="quinta" value='of'></td>
+                    </tr>
 
-                <tr align="center">
-                    <td>{{$datas['sexta']}}</td>
-                    <td>Sexta-feira</td>
-                    <td><input class="radio-frequencia" type="radio" name="sexta"></td>
-                    <td><input class="radio-frequencia" type="radio" name="sexta"></td>
-                </tr>
-            
-            </table>
-            <a href="supervisionar">
-            <input class="form-submit" type="submit" value="Salvar">
-            </a>
+                    <tr align="center">
+                        <td>{{$datas['sexta']}}</td>
+                        <td>Sexta-feira</td>
+                        <input type="hidden" name="data_sexta" value="{{$datas['sexta']}}">
+                        <td><input class="radio-frequencia" type="radio" name="sexta" checked></td>
+                        <td><input class="radio-frequencia" type="radio" name="sexta" value='of'></td>
+                    </tr>
+                
+                </table>
+                <a href="supervisionar">
+                    <input class="form-submit" type="submit" value="Salvar">
+                </a>
+            </form>
             
 
         <div class="end-visualizar"></div>

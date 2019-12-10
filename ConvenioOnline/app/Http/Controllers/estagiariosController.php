@@ -11,23 +11,18 @@ class estagiariosController extends Controller
     public function show() {
 
         $estagiarios = DB::collection('alunos')->get();
-        $usuarios = DB::collection('logins')->get(); 
-        // echo $usuario['empresa'];
-
+        $usuarios = DB::collection('logins')->get();
 
         foreach ($usuarios as $usuario) {
             if ($usuario['usuario'] === $_SESSION['user']) {
-                echo $usuario['empresa'];
+                // echo $usuario['empresa'];
                 return view('supervisor.estagiarios', compact('estagiarios'), compact('usuario'));
                 
             }
         }
 
+    } // Fim da função show()
 
-
-
-        // return view('supervisor.estagiarios');
-    }
 
 
 
@@ -40,7 +35,7 @@ class estagiariosController extends Controller
         $estagiarios = DB::collection('alunos')->get();
         $data_atual = new DateTime();
 
-        echo $data_atual->format('m');
+        // echo $data_atual->format('m');
 
         $segunda = date_create($data_atual->format('d/m/Y'));
         $terca = date_create($data_atual->format('d/m/Y'));
@@ -122,40 +117,167 @@ class estagiariosController extends Controller
             }
         }
 
+    } // Fim da função aluno_frequencia()
+
+
+
+    public function salvar_frequencia(Request $frequencia_aluno){
+
+
+        $frequencias = DB::collection('frequencia')->get();
+
+        $data_segunda = $frequencia_aluno->data_segunda;
+        $data_terca = $frequencia_aluno->data_terca;
+        $data_quarta = $frequencia_aluno->data_quarta;
+        $data_quinta = $frequencia_aluno->data_quinta;
+        $data_sexta = $frequencia_aluno->data_sexta;
+
+
+        $nome_estagiario = $frequencia_aluno->nome_estagiario;
+        $inicio_semana = $frequencia_aluno->inicio_semana;
+        $segunda = $frequencia_aluno->segunda;
+        $terca = $frequencia_aluno->terca;
+        $quarta = $frequencia_aluno->quarta;
+        $quinta = $frequencia_aluno->quinta;
+        $sexta = $frequencia_aluno->sexta;
+
+
+
+        $existe_estagiario = false;
+        $existe_frequencia = false;
+
+        foreach ($frequencias as $frequencia) {
+
+            if ($frequencia['estagiario'] === $nome_estagiario) {
+                $existe_estagiario = true;
+                if ($frequencia['data_segunda'] === $inicio_semana) {
+                    $existe_frequencia = true;
+                }
+            }
+
+            // echo $frequencia['estagiario'];
+        }
+
+        if ($existe_estagiario) {
+            if ($existe_frequencia) {
+                return redirect ('supervisionar');
+            }
+            else {
+                
+                DB::collection('frequencia')->insert(
+                    [
+                        'estagiario' => $nome_estagiario,
+        
+                        // 'inicio_semana' => $inicio_semana,
+        
+                        'data_segunda' => $data_segunda,
+                        'segunda' => $segunda,
+        
+                        'data_terca' => $data_terca,
+                        'terca' => $terca,
+        
+                        'data_quarta' => $data_quarta,
+                        'quarta' => $quarta,
+                        
+                        'data_quinta' => $data_quinta,
+                        'quinta' => $quinta,
+        
+                        'data_sexta' => $data_sexta,
+                        'sexta' => $sexta
+                    ]
+                );
+                return redirect ('supervisionar');
+
+            }
+        }
+
+        else {
+            DB::collection('frequencia')->insert(
+                [
+                    'estagiario' => $nome_estagiario,
+    
+                    // 'inicio_semana' => $inicio_semana,
+    
+                    'data_segunda' => $data_segunda,
+                    'segunda' => $segunda,
+    
+                    'data_terca' => $data_terca,
+                    'terca' => $terca,
+    
+                    'data_quarta' => $data_quarta,
+                    'quarta' => $quarta,
+                    
+                    'data_quinta' => $data_quinta,
+                    'quinta' => $quinta,
+    
+                    'data_sexta' => $data_sexta,
+                    'sexta' => $sexta
+                ]
+            );
+
+            return redirect ('supervisionar');
+        }
+
+
+
+
+
+
+
+
+        // echo $inicio_semana;
+
+
+        
+        
+
+
+
+        // DB::collection('frequencia')->insert(
+        //     [
+        //         'estagiario' => $nome_estagiario,
+
+        //         'inicio_semana' => $inicio_semana,
+
+        //         'data_segunda' => $data_segunda,
+        //         'segunda' => $segunda,
+
+        //         'data_terca' => $data_terca,
+        //         'terca' => $terca,
+
+        //         'data_quarta' => $data_quarta,
+        //         'quarta' => $quarta,
+                
+        //         'data_quinta' => $data_quinta,
+        //         'quinta' => $quinta,
+
+        //         'data_sexta' => $data_sexta,
+        //         'sexta' => $sexta
+        //     ]
+        // );
+
+
+
+
+
+
+        // return redirect('supervisionar');
     }
 
 
 
 
 
-    // public function frequencia() {
-   
-    //     return view('supervisor.estagiarios');
 
-    //     // return view('supervisor.estagiarios');
-    // }
+
+
+
+
+
+
+
+
 
     
-    // public function frequencia($id) {
-
-    //     $estagiarios = DB::collection('alunos')->get();
-
-    //     foreach ($estagiarios as $estagiario) {
-    //         if ($estagiario['_id'] == $id) {
-    //             // echo $estagiario['nome'];
-    //             return view('supervisor.frequencia', compact('estagiario'));
-    //         }
-    //     }
-
-    //     // echo $estagiario;
-    // }
-
-    // public function frequencia($id) {
-
-    //     // DB::collection('convenios')->where('_id', $id)->update(['status' => 'd']);
-    //     $estagiarios = DB::collection('alunos')->where('_id', $id)->get(); 
-    //     return redirect('/frequencia' with compact('estagiarios'));
-    
-    // }
 
 } // Fim controller
