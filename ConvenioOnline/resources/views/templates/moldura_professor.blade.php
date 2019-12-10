@@ -29,7 +29,7 @@
                             <div class="options">
                                 <ul>
                                     <a href="minhas_indicacoes"><li>Minhas indicações</li></a>
-                                    <a href="nova_indicacao"><li>Nova indicação</li></a>
+                                    <a href="nova_indicacao_areas"><li>Nova indicação</li></a>
                                 </ul>
                             </div>
                         </li>    
