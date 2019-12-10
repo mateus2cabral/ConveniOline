@@ -66,6 +66,12 @@ use Illuminate\Support\Facades\Route;
 
         // ABA NOVA INDICAÇÃO
             Route::get('nova_indicacao', 'nova_indicacaoController@show')->middleware('checkProfessor');
+            Route::get('nova_indicacao_areas', 'nova_indicacaoController@abaAreas')->middleware('checkProfessor');
+            Route::post('nova_indicacao_empresas', 'nova_indicacaoController@abaEmpresas')->middleware('checkProfessor');
+            Route::post('nova_indicacao_alunos', 'nova_indicacaoController@abaAlunos')->middleware('checkProfessor');
+            Route::post('nova_indicacao_termo', 'nova_indicacaoController@abaTermo')->middleware('checkProfessor');
+
+            
 
         // ABA MINHAS INDICAÇÕES
             Route::get('minhas_indicacoes', 'minhas_indicacoesController@show')->middleware('checkProfessor');
