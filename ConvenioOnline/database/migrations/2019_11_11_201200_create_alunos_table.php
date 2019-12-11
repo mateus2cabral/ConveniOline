@@ -17,7 +17,9 @@ class CreateAlunosTable extends Migration
         Schema::create('alunos', function($Collection){
             $Collection->string('nome');
             $Collection->string('matricula');
-            $Collection->string('curso');
+            $Collection->string('email');
+            $Collection->string('areaEstagio');
+            $Collection->string('rsocialEstagio');
         });
     }
 

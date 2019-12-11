@@ -19,14 +19,14 @@
 
                 <tr>
                     <th>Nome</th>
-                    <th>Matríucla</th>
+                    <th>Matrícula</th>
                     <th>Ação</th>
                 </tr>
                 
                 @foreach ($estagiarios as $estagiario)
                     <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
                     
-                    @if ($estagiario['empresa'] === $usuario['empresa'] && $estagiario['area'] === $usuario['area'])
+                    @if ($estagiario['rsocialEstagio'] === $usuario['empresa'] && $estagiario['areaEstagio'] === $usuario['area'])
                         <tr align="center">
                         <td>{{ $estagiario['nome'] }}</td>
                         <td>{{ $estagiario['matricula'] }}</td>
