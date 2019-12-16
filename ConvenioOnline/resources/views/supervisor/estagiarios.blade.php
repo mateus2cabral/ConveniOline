@@ -25,7 +25,6 @@
                 
                 @foreach ($estagiarios as $estagiario)
                     <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
-                    
                     @if ($estagiario['rsocialEstagio'] === $usuario['empresa'] && $estagiario['areaEstagio'] === $usuario['area'])
                         <tr align="center">
                         <td>{{ $estagiario['nome'] }}</td>
