@@ -24,7 +24,7 @@
                 
                 @foreach ($areas as $area)
                     <li align="left">
-                        <input id="{{ $area }}" type="radio" name="radio" value="{{ $area }}">
+                        <input id="{{ $area }}" type="radio" name="radio" value="{{ $area }}" required required-message="Selecione uma área">
                         <label for="{{ $area }}">{{ $area }}</label>
                     </li>
 

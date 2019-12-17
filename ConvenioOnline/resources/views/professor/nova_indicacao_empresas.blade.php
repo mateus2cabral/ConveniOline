@@ -24,7 +24,7 @@
                 <ul>
                 @foreach ($empresas as $empresa)
                     <li align="left">
-                        <input id="{{ $empresa }}" type="radio" name="radio" value="{{ $empresa }}">
+                        <input id="{{ $empresa }}" type="radio" name="radio" value="{{ $empresa }} " required  required-message="Selecione uma área">
                         <label for="{{ $empresa }}">{{ $empresa }}</label>
                     </li>
 

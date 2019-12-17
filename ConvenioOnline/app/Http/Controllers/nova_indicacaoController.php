@@ -9,7 +9,7 @@ class nova_indicacaoController extends Controller
 {
 
     public function abaAreas() {
-
+        
         // filtra as empresas e recolhe as areas disponiveis em um vetor
 
         $aconhecimentos = DB::collection('aconhecimentos')->get();
@@ -58,7 +58,9 @@ class nova_indicacaoController extends Controller
    
 
     public function abaEmpresas (Request $request) {
+        // session_start();
 
+        $_SESSION["areaEstagio"] = $request->radio;
 
          // filtra os elementos do vetor pela area selecionada
 
@@ -111,17 +113,52 @@ class nova_indicacaoController extends Controller
             }
         }
 
+
         return view('professor.nova_indicacao_empresas', compact('empresas'));
     }
 
     public function abaAlunos (Request $request) {
+        $_SESSION["empresaEstagio"] = $request->radio;
+
+        
 
         return view('professor.nova_indicacao_alunos');
     }
 
     public function abaTermo (Request $request) {
+        $_SESSION["nomeAluno"] = $request->nome;
+        $_SESSION["matAluno"] = $request->matricula;
+        $_SESSION["emailAluno"] = $request->email;
+        $info = [];
 
-        return "View em construção";
+        array_push($info, $_SESSION["nomeAluno"]);
+        array_push($info, $_SESSION["matAluno"]);
+        array_push($info, $_SESSION["emailAluno"]);
+
+        $logins = DB::collection('logins')->get();
+
+        foreach ($logins as $key => $login) {
+            if ($login['usuario'] === $_SESSION["user"]) {
+                array_push($info, $login['nome']);
+                $_SESSION["nomeProfessor"] = $login['nome'];
+            }
+        }
+
+        return view('professor.nova_indicacao_termo', compact('info'));
+    }
+
+    public function confirmaTermo () {
+        DB::collection('estagio')->insert(
+            ['nomeProfessor' =>  $_SESSION["nomeProfessor"],
+             'nomeAluno' => $_SESSION["nomeAluno"],
+             'matriculaAluno' => $_SESSION["matAluno"],
+             'empresa' =>  $_SESSION["empresaEstagio"],
+             'area' => $_SESSION["areaEstagio"],
+             'supervisor' => "",
+             'data' => date('d-m-Y')]
+        );
+
+        return redirect('\inicio_professor');
     }
 
 }

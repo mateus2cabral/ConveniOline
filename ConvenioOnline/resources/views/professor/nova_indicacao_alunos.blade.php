@@ -16,22 +16,45 @@
             Insira as informações do aluno 
         </div>
 
-        <div class="aba_options" id="active">
+        <div class="aba_form" id="active">
             <form action="nova_indicacao_termo" method="post">
             {{csrf_field() }}
 
-                <ul>
-                
-                
-                </ul>
+           
+            <div class="form_field-12">
+                <div class="form_field_label">
+                    Nome:
+                </div>
+                <div class="form_field_input">
+                    <input type="text" name="nome" required>
+                </div>
+            </div>
+
+            <div class="form_field-6">
+                <div class="form_field_label">
+                Matriculas:
+                </div>
+                <div class="form_field_input">
+                    <input type="text" name="matricula" required>
+                </div>
+            </div>
+
+            <div class="form_field-6">
+                <div class="form_field_label">
+                Email:
+                </div>
+                <div class="form_field_input">
+                    <input type="text" name="email" required>
+                </div>
+            </div>
+            
             
             
         </div>
         <div class="aba_button">
-            <input type="hidden" name="aba" value="">
             <input class="form-submit" type="submit" value="Next">
         </div>
-        </form>
+            </form>
 
     </div>
     

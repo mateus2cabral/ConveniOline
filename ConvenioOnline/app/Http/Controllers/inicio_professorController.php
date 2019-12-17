@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 class inicio_professorController extends Controller
 {
     public function show(){
+
+        $_SESSION["areaEstagio"] = '';
+        $_SESSION["empresaEstagio"] = '';
+        $_SESSION["nomeAluno"] = '';
+        $_SESSION["matAluno"] = '';
+        $_SESSION["emailAluno"] = '';
+        $_SESSION["nomeProfessor"] = '';
+
+
         return view('professor.inicio_professor');
     }
 
