@@ -52,9 +52,11 @@
             
         </div>
         <div class="aba_button">
-            <input class="form-submit" type="submit" value="Next">
-        </div>
+            <input class="form-submit" type="submit" value="Próximo">
             </form>
+            <a href="nova_indicacao_empresas2"><button class="form-submit">Voltar</button> </a>
+        </div>
+            
 
     </div>
     

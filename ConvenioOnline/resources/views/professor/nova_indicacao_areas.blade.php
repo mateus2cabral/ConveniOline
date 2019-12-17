@@ -35,7 +35,7 @@
         </div>
         <div class="aba_button">
             <input type="hidden" name="aba" value="">
-            <input class="form-submit" type="submit" value="Next">
+            <input class="form-submit" type="submit" value="Próximo">
         </div>
         </form>
 

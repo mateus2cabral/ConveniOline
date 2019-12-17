@@ -26,6 +26,7 @@
         </div>
         <div class="aba_button">
             <a href="confirma_termo"><input class="form-submit" type="submit" value="Confirmar"></a>
+            <a href="nova_indicacao_alunos2"><button class="form-submit" type="submit">Voltar</button> </a>
         </div>
        
 

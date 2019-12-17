@@ -26,6 +26,9 @@
                     <li align="left">
                         <input id="{{ $empresa }}" type="radio" name="radio" value="{{ $empresa }} " required  required-message="Selecione uma área">
                         <label for="{{ $empresa }}">{{ $empresa }}</label>
+                        
+
+                        
                     </li>
 
                 @endforeach
@@ -36,9 +39,11 @@
         </div>
         <div class="aba_button">
             <input type="hidden" name="aba" value="">
-            <input class="form-submit" type="submit" value="Next">
+            <input class="form-submit" type="submit" value="Próximo">
+            </form>
+            <a href="nova_indicacao_areas"><button class="form-submit" >Voltar</button> </a>
         </div>
-        </form>
+        
 
     </div>
     

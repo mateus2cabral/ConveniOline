@@ -80,7 +80,7 @@ class nova_indicacaoController extends Controller
 
         // Verifico os usuarios que ofertam a area selecionada
         foreach ($aconhecimentos as $registro) {
-            if ($registro['area'] === $request->radio) {
+            if ($registro['area'] === $_SESSION["areaEstagio"]) {
 
                 if (sizeof($usersOfertantes) === 0) {
                     array_push($usersOfertantes, $registro['user']);
@@ -161,4 +161,64 @@ class nova_indicacaoController extends Controller
         return redirect('\inicio_professor');
     }
 
+    public function abaEmpresas2 () {
+        
+        $aconhecimentos = DB::collection('aconhecimentos')->get();
+        $convenios = DB::collection('convenios')->get();
+
+        $usersOfertantes = [];
+        $empresas = [];
+        $conveniosDisponiveis = [];
+
+        // Verifico os convenios ue foram deferidos
+        foreach ($convenios as $key => $convenio) {
+            if ($convenio['status'] === 'd') {
+                array_push($conveniosDisponiveis, $convenio);
+            }
+        }
+
+        // Verifico os usuarios que ofertam a area selecionada
+        foreach ($aconhecimentos as $registro) {
+            if ($registro['area'] === $_SESSION["areaEstagio"]) {
+
+                if (sizeof($usersOfertantes) === 0) {
+                    array_push($usersOfertantes, $registro['user']);
+
+                } else {
+                    $repetido = false;
+
+                    foreach ($usersOfertantes as $u) {
+
+                        if($registro['user'] === $u){
+                            $repetido = true;
+                        }
+                    }
+
+                    if(!$repetido) {
+                        array_push($usersOfertantes, $registro['user']);
+                    }
+                    
+                }
+            }
+            
+        }
+
+        foreach ($usersOfertantes as $user) {
+            foreach ($conveniosDisponiveis as $convenio) {
+             
+                if ($user === $convenio['login'] ) {
+                    array_push($empresas, $convenio['rsocial']);
+                }
+            }
+        }
+
+
+        return view('professor.nova_indicacao_empresas', compact('empresas'));
+    }
+
+    public function abaAlunos2 () {
+        
+
+        return view('professor.nova_indicacao_alunos');
+    }
 }
