@@ -155,6 +155,7 @@ class nova_indicacaoController extends Controller
              'empresa' =>  $_SESSION["empresaEstagio"],
              'area' => $_SESSION["areaEstagio"],
              'supervisor' => "",
+             'status' => "ag",
              'data' => date('d-m-Y')]
         );
 

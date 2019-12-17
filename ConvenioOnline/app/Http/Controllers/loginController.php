@@ -12,6 +12,14 @@ class loginController extends Controller
 
         $_SESSION["user"] = "";
         $_SESSION["tipo"] = "";
+// Relacionado a view de professor
+        $_SESSION["areaEstagio"] = '';
+        $_SESSION["empresaEstagio"] = '';
+        $_SESSION["nomeAluno"] = '';
+        $_SESSION["matAluno"] = '';
+        $_SESSION["emailAluno"] = '';
+        $_SESSION["nomeProfessor"] = '';
+
 
         return view('login');
     }
@@ -49,6 +57,9 @@ class loginController extends Controller
                     }
                     if ($user["tipo"] == 'prof'){
                         $_SESSION["tipo"]= 'prof';
+
+
+                        $_SESSION["nomeProfessor"] = $user['nome'];
                         $finded = true;
                         
                         return redirect('/inicio_professor');

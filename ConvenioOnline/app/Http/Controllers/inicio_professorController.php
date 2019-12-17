@@ -13,7 +13,6 @@ class inicio_professorController extends Controller
         $_SESSION["nomeAluno"] = '';
         $_SESSION["matAluno"] = '';
         $_SESSION["emailAluno"] = '';
-        $_SESSION["nomeProfessor"] = '';
 
 
         return view('professor.inicio_professor');

@@ -2,3 +2,80 @@
     text-align: center;
     font-size: large;
 }
+
+th {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 15px;
+}
+
+td {
+    font-size: 20px;
+    padding: 10px;        
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 15px;
+}
+
+
+table {
+    margin-top: 10px;
+    width: 1200px;
+    padding: 10px 10px 10px 10px;
+}
+
+.visualizar
+ {
+    width: auto;
+    height: auto;
+    margin: auto;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.form-visualizar
+ {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.form-title-visualizar
+ {
+    padding: 40px 35px;
+    width: 500px;
+    height: 10px;
+    font-size: 32px;
+}
+
+.input-visualizar
+ {
+    border: 1px solid  #ccc;
+    border-radius: 6px;
+    height: 35px;
+    width: 380px;
+    font-size: 18px;
+    padding: 2px;
+    background-color: rgb(248, 251, 255);
+}
+
+.form-fields-visualizar
+ {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 15px;   
+}
+
+.end-visualizar
+ {
+    margin-top: auto;
+    width: 530px;
+    height: 10px;
+    display: block;
+}
+
+.button-visualizar
+ {
+    margin: 15px 100px 0px 110px;
+    display: block;
+}
