@@ -41,6 +41,9 @@ use Illuminate\Support\Facades\Route;
         //ABA ESTAGIO
             //LISTA TERMOS DE ESTAGIO
             Route::get('preg_estagio','estagio_pregController@show')->middleware('checkPreg');
+            Route::post('validar_estagio','estagio_pregController@validar_estagio')->middleware('checkPreg');
+
+            
 
 
 
@@ -75,7 +78,7 @@ use Illuminate\Support\Facades\Route;
             Route::post('nova_indicacao_alunos', 'nova_indicacaoController@abaAlunos')->middleware('checkProfessor');
             Route::get('nova_indicacao_alunos2', 'nova_indicacaoController@abaAlunos2')->middleware('checkProfessor');
             Route::post('nova_indicacao_termo', 'nova_indicacaoController@abaTermo')->middleware('checkProfessor');
-            Route::get('confirma_termo', 'nova_indicacaoController@confirmaTermo')->middleware('checkProfessor');
+            Route::post('confirma_termo', 'nova_indicacaoController@confirmaTermo')->middleware('checkProfessor');
 
 
             

@@ -147,7 +147,7 @@ class nova_indicacaoController extends Controller
         return view('professor.nova_indicacao_termo', compact('info'));
     }
 
-    public function confirmaTermo () {
+    public function confirmaTermo (Request $request) {
         DB::collection('estagio')->insert(
             ['nomeProfessor' =>  $_SESSION["nomeProfessor"],
              'nomeAluno' => $_SESSION["nomeAluno"],
@@ -155,9 +155,11 @@ class nova_indicacaoController extends Controller
              'empresa' =>  $_SESSION["empresaEstagio"],
              'area' => $_SESSION["areaEstagio"],
              'supervisor' => "",
-             'status' => "ag",
+             'termo' => $request->termo,
+             'status' => "ap",
              'data' => date('d-m-Y')]
         );
+
 
         return redirect('\inicio_professor');
     }

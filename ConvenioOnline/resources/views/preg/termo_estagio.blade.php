@@ -11,17 +11,70 @@
 
             <div class="form-fields-visualizar"></div>
 
-                <table align="center">
+            <table align="center">
 
-                    <tr>
-                        <th>Professor</th>
-                        <th>Aluno</th>
-                        <th>Empresa</th>
-                        <th>Area de Estagio</th>
-                    </tr>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Matricula</th>
+                    <th>Empresa</th>
+                    <th>Área</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                </tr>
+
+
+                @foreach ($estagios as $estagio)
+                    @if ($estagio['status'] === 'ap')
+
+                        <tr align="center">
+                        <td>{{ $estagio['nomeAluno'] }}</td>
+                        <td>{{ $estagio['matriculaAluno'] }}</td>
+                        <td>{{ $estagio['empresa'] }}</td>
+                        <td>{{ $estagio['area'] }}</td>
+                        <td>{{ $estagio['data'] }}</td>
+                        <td>
+                            <button class="button-deferir-indeferir" onclick="mostrar_pop_up()">Ver termo</button>
+                        </tr>
+                        
+                        <form action="validar_estagio" method="post">
+                            {{csrf_field() }}
+
+                            <div class="modal" id="modal">
+
+                                <div class="modal-title">Termo de Estágio</div>
+                                <div class="modal-content">
+                                {{ $estagio['termo'] }}
+                                </div>
+
+                                <div class="modal-radio">
+
+                                    <input class="justificativa-radio" type="radio" name="radio" value="Aceitar" required>
+                                    <label for="Aceitar">Aceitar</label>
+
+                                    <input class="justificativa-radio" type="radio" name="radio" value="Rejeitar" required>
+                                    <label for="Rejeitar">Rejeitar</label>
+                    
+                                </div>
+                                
+
+                                <input  type="hidden" name="id" value="{{ $estagio['_id'] }}">
+
+                                <div class="modal-buttom">
+
+                                    <input class="justificativa-submit" type="submit" value="Confirmar">
+                                    <input class="justificativa-fechar" value="Fechar" onclick="ocultar_pop_up()">
+                    
+                                </div>
+                            </div>
+                        </form>
+                    @endif
+                @endforeach  
                 </table>
     </div>
 </div>
+
+<script type="text/javascript" src="js/visualizar_solicitacao_preg.js"></script>
+
 
 @endsection
 

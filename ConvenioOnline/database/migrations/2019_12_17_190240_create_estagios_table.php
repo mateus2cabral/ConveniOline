@@ -20,7 +20,8 @@ class CreateEstagiosTable extends Migration
             $collection->string('nomeAluno');
             $collection->string('matriculaAluno');
             $collection->string('supervisor');
-            $collection->enum('status', ['ap', 're', 'ag']);
+            $collection->string('termo');
+            $collection->enum('status', ['ae', 'ap', 're', 'rp']);
             $collection->date('data');
         });
     }

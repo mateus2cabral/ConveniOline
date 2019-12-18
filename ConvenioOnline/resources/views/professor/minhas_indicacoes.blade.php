@@ -32,14 +32,17 @@
                             <td>{{ $estagio['empresa'] }}</td>
                             <td>{{ $estagio['area'] }}</td>
                             <td>{{ $estagio['data'] }}</td>
-                            @if ( $estagio['status'] === 'ag')
-                                <td>Aberto</td>
+                            @if ( $estagio['status'] === 'ae')
+                                <td>Aguardando analise da empresa</td>
                             @endif
                             @if ( $estagio['status'] === 'ap')
-                                <td>Aceito</td>
+                                <td>Aguardando analise da PREG</td>
+                            @endif
+                            @if ( $estagio['status'] === 'rp')
+                                <td>Rejeitado pela PREG</td>
                             @endif
                             @if ( $estagio['status'] === 're')
-                                <td>Rejeitado</td>
+                                <td>Rejeitado pela empresa</td>
                             @endif
                             
 

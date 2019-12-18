@@ -25,7 +25,12 @@
             
         </div>
         <div class="aba_button">
-            <a href="confirma_termo"><input class="form-submit" type="submit" value="Confirmar"></a>
+            <form action="confirma_termo" method="post">
+            {{csrf_field() }}
+                <input type="hidden" name="termo" value='Eu {{ $info[3] }} indico o aluno {{ $info[0] }} de matricula {{$info[1]}} para um estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} na área de {{ $_SESSION["areaEstagio"] }}.'>
+
+                <input class="form-submit" type="submit" value="Confirmar">                                        
+            </form>
             <a href="nova_indicacao_alunos2"><button class="form-submit" type="submit">Voltar</button> </a>
         </div>
        
