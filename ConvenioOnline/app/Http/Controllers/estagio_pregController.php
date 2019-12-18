@@ -17,7 +17,7 @@ class estagio_pregController extends Controller
     }
 
     public function validar_estagio(Request $request) {
-        $estagios = DB::collection('estagio')->get();
+        
 
         if ($request->radio == 'Aceitar') {
             DB::collection('estagio')->where('_id', $request->id)->update(['status' => 'ae']);
@@ -26,7 +26,8 @@ class estagio_pregController extends Controller
             DB::collection('estagio')->where('_id', $request->id)->update(['status' => 'rp']);
         }
         
-
+        $estagios = DB::collection('estagio')->get();
+        
         return view('preg.termo_estagio', compact('estagios'));
     }
 }

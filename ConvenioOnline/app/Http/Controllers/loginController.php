@@ -20,6 +20,9 @@ class loginController extends Controller
         $_SESSION["emailAluno"] = '';
         $_SESSION["nomeProfessor"] = '';
 
+// Rellacionado a view de empresa
+        $_SESSION["conveniado"] = false;
+
 
         return view('login');
     }
@@ -51,8 +54,6 @@ class loginController extends Controller
                         $finded = true;
 
                         return redirect('/inicio_empresa');
-
-                        // return redirect('/inicio_empresa');
         
                     }
                     if ($user["tipo"] == 'prof'){

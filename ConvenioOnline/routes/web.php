@@ -42,6 +42,7 @@ use Illuminate\Support\Facades\Route;
             //LISTA TERMOS DE ESTAGIO
             Route::get('preg_estagio','estagio_pregController@show')->middleware('checkPreg');
             Route::post('validar_estagio','estagio_pregController@validar_estagio')->middleware('checkPreg');
+            
 
             
 
@@ -64,8 +65,12 @@ use Illuminate\Support\Facades\Route;
                 Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
         //ABA ESTAGIO
             //LISTA TERMOS DE ESTAGIO
-                Route::get('preg_estagio','estagio_pregController@show')->middleware();
+                Route::get('estagios','validar_estagioController@show')->middleware('checkEmpresa');
+                Route::post('validar_estagio_empresa','validar_estagioController@validar_estagio')->middleware('checkEmpresa');
 
+    
+    
+    
     // ROTAS REFERENTES A PROFESSORES
         // ABA INICIO
             Route::get('inicio_professor', 'inicio_professorController@show')->middleware('checkProfessor');
@@ -84,19 +89,19 @@ use Illuminate\Support\Facades\Route;
             
 
         
-            // ROTAS REFERENTES A SUPERVISOR
+    // ROTAS REFERENTES A SUPERVISOR
         // ABA INICIO
-        // Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
-        Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
-        Route::get('supervisionar', 'estagiariosController@show')->middleware('checkSupervisor');
-        // Route::get('frequencia', 'estagiariosController@frequencia')->middleware('checkSupervisor');
-        Route::post('aluno_frequencia', 'estagiariosController@aluno_frequencia')->middleware('checkSupervisor');
-        Route::post('salvar_frequencia', 'estagiariosController@salvar_frequencia')->middleware('checkSupervisor');
+            // Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
+            Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
+            Route::get('supervisionar', 'estagiariosController@show')->middleware('checkSupervisor');
+            // Route::get('frequencia', 'estagiariosController@frequencia')->middleware('checkSupervisor');
+            Route::post('aluno_frequencia', 'estagiariosController@aluno_frequencia')->middleware('checkSupervisor');
+            Route::post('salvar_frequencia', 'estagiariosController@salvar_frequencia')->middleware('checkSupervisor');
         
         // ABA SUPERVISORES
-        Route::get('supervisores', 'cadastro_supervisorController@mostra_supervisores')->middleware('checkEmpresa');
-        Route::get('cadastro_supervisor', 'cadastro_supervisorController@cadastro_supervisor')->middleware('checkEmpresa');
-        Route::post('cadastrar_supervisor', 'cadastro_supervisorController@cadastrar_supervisor')->middleware('checkEmpresa');
+            Route::get('supervisores', 'cadastro_supervisorController@mostra_supervisores')->middleware('checkEmpresa');
+            Route::get('cadastro_supervisor', 'cadastro_supervisorController@cadastro_supervisor')->middleware('checkEmpresa');
+            Route::post('cadastrar_supervisor', 'cadastro_supervisorController@cadastrar_supervisor')->middleware('checkEmpresa');
 
         
 
