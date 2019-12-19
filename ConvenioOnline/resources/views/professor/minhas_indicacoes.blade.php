@@ -38,6 +38,9 @@
                             @if ( $estagio['status'] === 'ap')
                                 <td>Aguardando analise da PREG</td>
                             @endif
+                            @if ( $estagio['status'] === 'a')
+                                <td>Aprovado</td>
+                            @endif
                             @if ( $estagio['status'] === 'rp')
                                 <td>Rejeitado pela PREG</td>
                             @endif

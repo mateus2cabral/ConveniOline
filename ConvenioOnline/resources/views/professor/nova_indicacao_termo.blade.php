@@ -17,9 +17,9 @@
 
         </div>
 
-        <div class="aba_options" id="active">
-            Eu {{ $info[3] }} indico o aluno {{ $info[0] }} de matricula {{$info[1]}} <br> 
-            para um estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} <br>
+        <div class="aba_options" id="active" align="center">
+            Eu, {{ $info[3] }} indico {{ $info[0] }} de matricula {{$info[1]}}
+            para o estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }}
             na área de {{ $_SESSION["areaEstagio"] }}.
             
             
@@ -27,7 +27,8 @@
         <div class="aba_button">
             <form action="confirma_termo" method="post">
             {{csrf_field() }}
-                <input type="hidden" name="termo" value='Eu {{ $info[3] }} indico o aluno {{ $info[0] }} de matricula {{$info[1]}} para um estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} na área de {{ $_SESSION["areaEstagio"] }}.'>
+                <input type="hidden" name="termo"
+                value='Eu, {{ $info[3] }} indico {{ $info[0] }} de matricula {{$info[1]}} para o estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} na área de {{ $_SESSION["areaEstagio"] }}.'>
 
                 <input class="form-submit" type="submit" value="Confirmar">                                        
             </form>

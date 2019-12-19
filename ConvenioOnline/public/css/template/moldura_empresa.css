@@ -61,6 +61,7 @@ body {
 }
 
 .inner-menu-bar ul li:hover{
+    cursor: pointer;
     color: #444;
 }
 

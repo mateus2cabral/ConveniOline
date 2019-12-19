@@ -35,8 +35,9 @@
                         <a href="validar"><li>Convênios</li></a>
                         @if ( $_SESSION["conveniado"] === true)
                             <a href="estagios"><li>Estágios</li></a>
+                            <a href="supervisores"><li>Supervisores</li></a>
                         @endif
-                        <a href="supervisores"><li>Supervisores</li></a>
+
                         <a href="login"><li class="exit">Sair</li></a>
                     </ul>       
                 </div>

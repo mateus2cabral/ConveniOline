@@ -72,18 +72,18 @@
                     <div class="drop_down" onmouseover="mostrarDD()" onmouseout="ocultarDD()"> Selecione as áreas para estágio...
                         <div class="options">
                             <ul>
-                            @php
-                              $i = 1;
-                            @endphp
-                            
-                            @foreach ($aconhecimento as $area)
-                            
-                                <li>
-                                    <input id="{{ $area }}" type="checkbox" name="ckb[]" value="{{ $area }}">
-                                    <label for="{{ $area }}">{{ $area }}</label>
-                                </li>
+                                @php
+                                    $i = 1;
+                                @endphp
+                                
+                                @foreach ($aconhecimento as $area)
+                                
+                                    <li>
+                                        <input id="{{ $area }}" type="checkbox" name="ckb[]" value="{{ $area }}">
+                                        <label for="{{ $area }}">{{ $area }}</label>
+                                    </li>
 
-                            @endforeach
+                                @endforeach
                             </ul>
                         </div>
                         
@@ -104,5 +104,3 @@
 </div>
         
 @endsection
-
-
