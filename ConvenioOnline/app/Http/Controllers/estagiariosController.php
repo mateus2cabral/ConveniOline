@@ -202,6 +202,19 @@ class estagiariosController extends Controller
                 
             }
             else {
+
+                if ($segunda == 'on') {
+                    $ch = $ch + 4;
+                }
+                if ($terca == 'on') {
+                    $ch = $ch + 4;
+                }if ($quarta == 'on') {
+                    $ch = $ch + 4;
+                }if ($quinta == 'on') {
+                    $ch = $ch + 4;
+                }if ($sexta == 'on') {
+                    $ch = $ch + 4;
+                }
                 
                 DB::collection('frequencia')->insert(
                     [
@@ -233,6 +246,21 @@ class estagiariosController extends Controller
         }
 
         else {
+
+            if ($segunda == 'on') {
+                $ch = $ch + 4;
+            }
+            if ($terca == 'on') {
+                $ch = $ch + 4;
+            }if ($quarta == 'on') {
+                $ch = $ch + 4;
+            }if ($quinta == 'on') {
+                $ch = $ch + 4;
+            }if ($sexta == 'on') {
+                $ch = $ch + 4;
+            }
+
+            
             DB::collection('frequencia')->insert(
                 [
                     'estagiario' => $nome_estagiario,
@@ -252,7 +280,9 @@ class estagiariosController extends Controller
                     'quinta' => $quinta,
     
                     'data_sexta' => $data_sexta,
-                    'sexta' => $sexta
+                    'sexta' => $sexta,
+
+                    'ch' => $ch
                 ]
             );
 

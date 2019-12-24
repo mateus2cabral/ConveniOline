@@ -13,13 +13,14 @@ class CreateFrequenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('frequencias', function (Blueprint $collection) {
+        Schema::create('frequencia', function (Blueprint $collection) {
             $collection->string('estagiario');
             $collection->string('segunda');
             $collection->string('terca');
             $collection->string('quarta');
             $collection->string('quinta');
             $collection->string('sexta');
+            $collection->int('ch');
         });
     }
 

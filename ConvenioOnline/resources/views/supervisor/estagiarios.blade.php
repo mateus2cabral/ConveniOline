@@ -33,12 +33,19 @@
                         <td>{{ $estagiario['nomeAluno'] }}</td>
                         <td>{{ $estagiario['matriculaAluno'] }}</td>
                         <td>
-
+                        
+                            
                             @foreach ($frequencias as $frequencia)
 
-                                @if ($estagiario['nomeAluno'] === $frequencia['estagiario'])
-                                    {{ $frequencia['ch'] }}
+                            @if ($estagiario['nomeAluno'] === $frequencia['estagiario'])
+                                    {{ $frequencia['ch'] }}h
+                                
+                                
+                                
                                 @endif
+                            
+
+                                
 
                             @endforeach
                         
