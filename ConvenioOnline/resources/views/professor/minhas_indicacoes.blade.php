@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="css/professor/minhas_indicacoes.css">
 
 <div class="feed">
-    <!-- Minhas indicações de estagio <br> aparecerão aqui -->
 
     <div class="form-visualizar">
         <div class="visualizar">
@@ -23,7 +22,6 @@
                             <th>Data</th>
                             <th>Status</th>
                         </tr>
-                        
                         
                         @foreach ($meusEstagios as $estagio)
                             <tr align="center">
@@ -48,8 +46,6 @@
                                 <td>Rejeitado pela empresa</td>
                             @endif
                             
-
-                        
                         @endforeach  
                     </table>
                 
@@ -59,6 +55,5 @@
 
         </div>
 </div>
-
 
 @endsection

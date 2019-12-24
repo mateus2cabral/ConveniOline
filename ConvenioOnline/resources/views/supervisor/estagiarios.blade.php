@@ -10,9 +10,6 @@
             Estagiários
         </div>
 
-        <!-- <div align="center">LISTAGEM <br><br><strong> NÃO SINCRONIZADA</strong> <br><br> AO BANCO DE estagiarioS</div> -->
-        
-
         <div class="form-fields-visualizar"></div>
 
             <table align="center">
@@ -23,52 +20,35 @@
                     <th>Carga Horária</th>
                     <th>Ação</th>
                 </tr>
-
-                <!-- echo {{$frequencias}} -->
                 
                 @foreach ($estagiarios as $estagiario)
-                    <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
-                    @if ($estagiario['empresa'] === $usuario['empresa'] && $estagiario['area'] === $usuario['area'])
+                    @if ($estagiario['empresa'] === $usuario['empresa'] && $estagiario['area'] === $usuario['area'] && $estagiario['status'] === 'a')
                         <tr align="center">
-                        <td>{{ $estagiario['nomeAluno'] }}</td>
-                        <td>{{ $estagiario['matriculaAluno'] }}</td>
-                        <td>
-                        
+                            <td>{{ $estagiario['nomeAluno'] }}</td>
+                            <td>{{ $estagiario['matriculaAluno'] }}</td>
+                            <td>
                             
-                            @foreach ($frequencias as $frequencia)
+                                @foreach ($frequencias as $frequencia)
 
-                            @if ($estagiario['nomeAluno'] === $frequencia['estagiario'])
-                                    {{ $frequencia['ch'] }}h
+                                    @if ($estagiario['nomeAluno'] === $frequencia['estagiario'])
+                                        {{ $frequencia['ch'] }}h
+                                    @endif
                                 
-                                
-                                
-                                @endif
+                                @endforeach
                             
+                            </td>
 
-                                
+                            <td>
+                            <form method="POST" action="aluno_frequencia">
+                                {{csrf_field() }}
 
-                            @endforeach
-                        
-                        </td>
+                                <button class="button-frequencia">Frequência</button>
+                                <input type="hidden" name="id" value="{{ $estagiario['_id'] }}">
 
-
-
-
-                        <td>
-                        <form method="POST" action="aluno_frequencia">
-                        {{csrf_field() }}
-
-                        <button class="button-frequencia">Frequência</button>
-                        <input type="hidden" name="id" value="{{ $estagiario['_id'] }}">
-
-                        </form>
-                            <!-- <a href="frequencia/{{ $estagiario['_id'] }}"><button class="button-frequencia">Frequência</button></a> -->
+                            </form>
                         </tr>
 
                     @endif
-                        
-                    
-                    
                 
                 @endforeach 
 
@@ -81,4 +61,3 @@
 </div>
         
 @endsection
-

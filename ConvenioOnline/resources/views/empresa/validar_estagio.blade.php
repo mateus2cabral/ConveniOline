@@ -1,7 +1,6 @@
 @extends('templates.moldura_empresa')
 @section('content')
 
-
 <link rel='stylesheet' text='text/css' media='screen' href='./css/preg/preg_estagio.css'>
 
 <div class="form-visualizar">
@@ -48,7 +47,7 @@
 
                                 <div class="modal-radio">
 
-                                    <input id="Aceitar" class="justificativa-radio" type="radio" name="radio" value="Aceitar" required>
+                                    <input id="Aceitar" class="justificativa-radio" type="radio" name="radio" value="Aceitar" checked required>
                                     <label for="Aceitar">Aceitar</label>
 
                                     <input id="Rejeitar" class="justificativa-radio" type="radio" name="radio" value="Rejeitar" required>
@@ -56,7 +55,6 @@
                     
                                 </div>
                                 
-
                                 <input  type="hidden" name="id" value="{{ $estagio['_id'] }}">
 
                                 <div class="modal-buttom">
@@ -75,6 +73,4 @@
 
 <script type="text/javascript" src="js/visualizar_solicitacao_preg.js"></script>
 
-
 @endsection
-

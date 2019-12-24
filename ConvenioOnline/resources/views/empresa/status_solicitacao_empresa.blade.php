@@ -2,8 +2,6 @@
 @section('content')
 
 <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/status_solicitacao_empresa.css'>
-<!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/convenio_solicitacao.css'> -->
-
     
 <div class="panel">
 
@@ -12,7 +10,6 @@
     <div class="panel_container">
         <div class="data_solicitacao">Solicitado em {{$convenio['data']}}</div>
 
-        
         <div class="panel_block_50">
             <div class="label">
                 Representante
@@ -134,11 +131,6 @@
 
     </div>
 
-    
-  
-
 </div>
         
 @endsection
-
-

@@ -47,29 +47,27 @@ class loginController extends Controller
                         $_SESSION["tipo"]= 'preg';
                         $finded = true;
                         return redirect('/inicio_preg');
-        
                     } 
                     if ($user["tipo"] == 'empr') {
                         $_SESSION["tipo"]= 'empr';
                         $finded = true;
-
                         return redirect('/inicio_empresa');
-        
                     }
                     if ($user["tipo"] == 'prof'){
                         $_SESSION["tipo"]= 'prof';
-
-
                         $_SESSION["nomeProfessor"] = $user['nome'];
                         $finded = true;
-                        
                         return redirect('/inicio_professor');
                     }
                     if ($user["tipo"] == 'super'){
                         $_SESSION["tipo"]= 'super';
                         $finded = true;
-                        
                         return redirect('/inicio_supervisor');
+                    }
+                    if ($user["tipo"] == 'orien'){
+                        $_SESSION["tipo"]= 'orien';
+                        $finded = true;
+                        return redirect('/inicio_orientador');
                     }
                 } 
             } 

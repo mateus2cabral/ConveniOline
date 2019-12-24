@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="css/professor/nova_indicacao_areas.css">
 
 <div class="painel" >
-    <!-- Indique um novo aluno <br> para um estágio -->
     <div class="aba_header">
         <div class="aba" id="aba_active" >Setor</div>
         <div class="aba" >Empresa</div>
@@ -30,7 +29,6 @@
 
                 @endforeach
                 </ul>
-            
             
         </div>
         <div class="aba_button">

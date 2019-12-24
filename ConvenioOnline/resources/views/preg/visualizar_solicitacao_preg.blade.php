@@ -1,13 +1,7 @@
 @extends('templates.moldura_preg')
-
 @section('content')
 
-
-
 <link rel='stylesheet' type='text/css' media='screen' href='./css/preg/visualizar_solicitacao_preg.css'>
-
-
-
 
 <div class="form-visualizar">
 <div class="visualizar">
@@ -27,7 +21,6 @@
                 </tr>
                 
                 @foreach ($dados as $dado)
-                    <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
                     @if ($dado['status'] === 'a')
                         <tr align="center">
                         <td>{{ $dado['rsocial'] }}</td>
@@ -49,11 +42,8 @@
                             <input  type="hidden" name="id" value="{{ $dado['_id'] }}">
 
                             <div class="modal-buttom">
-
                                 <input class="justificativa-submit" type="submit" value="Salvar">
-                                <!-- <button class="justificativa-fechar" onclick="ocultar_pop_up()">Fechar</button> -->
                                 <input class="justificativa-fechar" value="Fechar" onclick="ocultar_pop_up()">
-                
                             </div>
                         </div>
                     </form>
@@ -72,4 +62,3 @@
 <script type="text/javascript" src="js/visualizar_solicitacao_preg.js"></script>
         
 @endsection
-

@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="css/professor/nova_indicacao_empresas.css">
 
 <div class="painel" >
-    <!-- Indique um novo aluno <br> para um estágio -->
     <div class="aba_header">
         <div class="aba" >Setor</div>
         <div class="aba" id="aba_active">Empresa</div>
@@ -22,19 +21,13 @@
             {{csrf_field() }}
 
                 <ul>
-                @foreach ($empresas as $empresa)
-                    <li align="left">
-                        <input id="{{ $empresa }}" type="radio" name="radio" value="{{ $empresa }} " required  required-message="Selecione uma área">
-                        <label for="{{ $empresa }}">{{ $empresa }}</label>
-                        
-
-                        
-                    </li>
-
-                @endforeach
-                
+                    @foreach ($empresas as $empresa)
+                        <li align="left">
+                            <input id="{{ $empresa }}" type="radio" name="radio" value="{{ $empresa }} " required  required-message="Selecione uma área">
+                            <label for="{{ $empresa }}">{{ $empresa }}</label>
+                        </li>
+                    @endforeach
                 </ul>
-            
             
         </div>
         <div class="aba_button">
@@ -43,8 +36,6 @@
             </form>
             <a href="nova_indicacao_areas"><button class="form-submit" >Voltar</button> </a>
         </div>
-        
-
     </div>
     
 </div>

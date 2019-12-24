@@ -10,8 +10,6 @@
             Frequência ({{$estagiario['nomeAluno']}})
         </div>
 
-        
-
         <div class="form-fields-visualizar"></div>
 
             <form method="POST" action="salvar_frequencia">
@@ -85,4 +83,3 @@
 </div>
         
 @endsection
-

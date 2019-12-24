@@ -61,14 +61,11 @@ use Illuminate\Support\Facades\Route;
                 Route::get('validar', 'convenio_solicitacaoController@validar')->middleware('checkEmpresa');
                 Route::get('ver_solicitacao', 'convenio_solicitacaoController@ver_solicitacao')->middleware('checkEmpresa');
 
-            // NÃO UTILIZADO
-                Route::get('detalhe_solicitacao', 'detalhe_solicitacaoController@show');
         //ABA ESTAGIO
             //LISTA TERMOS DE ESTAGIO
                 Route::get('estagios','validar_estagioController@show')->middleware('checkEmpresa');
                 Route::post('validar_estagio_empresa','validar_estagioController@validar_estagio')->middleware('checkEmpresa');
 
-    
     
     
     // ROTAS REFERENTES A PROFESSORES
@@ -87,7 +84,6 @@ use Illuminate\Support\Facades\Route;
 
 
             
-
         
     // ROTAS REFERENTES A SUPERVISOR
         // ABA INICIO
@@ -103,16 +99,10 @@ use Illuminate\Support\Facades\Route;
             Route::get('cadastro_supervisor', 'cadastro_supervisorController@cadastro_supervisor')->middleware('checkEmpresa');
             Route::post('cadastrar_supervisor', 'cadastro_supervisorController@cadastrar_supervisor')->middleware('checkEmpresa');
 
-        
 
-        // ABA SOLICITAÇÕES
-            // Route::get('visualizar_solicitacao', 'visualizar_solicitacao_pregController@mostra_solicitacoes')->middleware('checkPreg');
-            // Route::get('deferir/{id}', 'visualizar_solicitacao_pregController@deferir')->middleware('checkPreg');
-            // Route::post('indeferir', 'visualizar_solicitacao_pregController@indeferir')->middleware('checkPreg');
+    // ROTAS REFERENTES A ORIENTADOR
+        // ABA INICIO
+            // Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
+            Route::get('inicio_orientador', 'inicio_orientadorController@show')->middleware('checkOrientador');
 
-        // ABA USUÁRIOS
-            // Route::get('usuarios', 'cadastro_usuarioController@mostra_usuarios')->middleware('checkProfessor');
-            // Route::get('cadastro_usuario', 'cadastro_usuarioController@cadastro_usuario')->middleware('checkProfessor');
-            // Route::post('cadastrar_usuario', 'cadastro_usuarioController@cadastrar_usuario')->middleware('checkProfessor');
-    
-
+            

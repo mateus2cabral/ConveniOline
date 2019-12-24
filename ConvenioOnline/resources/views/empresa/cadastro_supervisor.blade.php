@@ -3,67 +3,18 @@
 
 <link rel='stylesheet' type='text/css' media='screen' href='./css/empresa/cadastro_supervisor.css'>
 
-    
 <div class="solicitacao">
 
     <form method="POST" action="cadastrar_supervisor">
         {{csrf_field() }}
 
     <div class="form-title-solicitacao">
-        
             Cadastro de supervisores
-
-        <!-- <div class="select-combo-box">
-            <select name='tipo' id=1 selected="selected" class="combo-box">
-                <option class="option" value="preg">PREG</option>
-                <option class="option" value="empr" >Empresa</option>
-                <option class="option" value="prof">Professor</option>
-            </select>
-            
-        </div> -->
     </div>
-
 
     <div class="form-solicitacao">
 
         <div class="form-fields-solicitacao"></div>
-
-
-
-
-
-            <!-- <div class="select-combo-box">
-                <div class="l-side">Tipo</div>
-
-                
-            </div> -->
-
-
-
-
-
-
-            <!-- <div>
-                <div class="left-side">Tipo de usuário:</div> 
-                <div class="option">
-                    <select name="tipo" id="1">
-                        <option value="empr">Empresa</option>
-                        <option value="preg">Preg</option>
-                    </select>
-                </div>
-            </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
             
             <div>
                 <div class="l-side">Nome:</div> 
@@ -131,5 +82,3 @@
 </div>
         
 @endsection
-
-

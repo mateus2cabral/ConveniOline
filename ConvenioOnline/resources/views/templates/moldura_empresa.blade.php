@@ -10,10 +10,6 @@
 </head>
 <body>
 
-
-
-
-
    <div class="container">
        <header class="h-eader">
             <div class="logo">
@@ -26,7 +22,6 @@
             </a>
        </header>
        
-           
        <div class="all-white">
            <div class="menu-bar">
                 <div class="inner-menu-bar">
@@ -63,5 +58,3 @@
     </div>
 </body>
 </html>
-
-

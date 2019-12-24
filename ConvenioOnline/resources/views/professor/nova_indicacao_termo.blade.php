@@ -13,7 +13,6 @@
     <div class="aba_content" id="active">
         <div class="aba_title">
             Leia o termo de estágio e confirme 
-
         </div>
 
         <div class="aba_options" id="active" align="center">
@@ -22,7 +21,6 @@
             indico <b>{{ $info[0] }}</b> de matricula {{$info[1]}} <br>
             para o estágio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} <br>
             na área de <b>{{ $_SESSION["areaEstagio"] }}</b>.
-            
         </div>
 
         <div class="aba_button">
@@ -30,7 +28,6 @@
             {{csrf_field() }}
                 <input type="hidden" name="termo"
                 value='Eu, {{ $info[3] }} indico {{ $info[0] }} de matricula {{$info[1]}} para o estágio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} na área de {{ $_SESSION["areaEstagio"] }}.'>
-
                 <input class="form-submit" type="submit" value="Confirmar">                                        
             </form>
             <a href="nova_indicacao_alunos2"><button class="form-submit" type="submit">Voltar</button> </a>

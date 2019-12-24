@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="css/professor/nova_indicacao_alunos.css">
 
 <div class="painel" >
-    <!-- Indique um novo aluno <br> para um estágio -->
     <div class="aba_header">
         <div class="aba" >Setor</div>
         <div class="aba" >Empresa</div>
@@ -48,8 +47,6 @@
                 </div>
             </div>
             
-            
-            
         </div>
         <div class="aba_button">
             <input class="form-submit" type="submit" value="Próximo">
@@ -57,7 +54,6 @@
             <a href="nova_indicacao_empresas2"><button class="form-submit">Voltar</button> </a>
         </div>
             
-
     </div>
     
 </div>

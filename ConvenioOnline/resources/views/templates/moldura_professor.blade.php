@@ -14,7 +14,7 @@
             <div class="logo">
                 <a href="https://www.uespi.br/site/"> <img src="image/logo-uespi.png" width="208" height="80"></a>
             </div>
-            <a href="inicio_empresa">
+            <a href="inicio_professor">
                 <div class="title">
                     ConvêniOnline
                 </div>

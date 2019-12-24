@@ -1,7 +1,6 @@
 @extends('templates.moldura_preg')
 @section('content')
 
-
 <link rel='stylesheet' text='text/css' media='screen' href='./css/preg/preg_estagio.css'>
 
 <div class="form-visualizar">
@@ -21,7 +20,6 @@
                     <th>Data</th>
                     <th>Ação</th>
                 </tr>
-
 
                 @foreach ($estagios as $estagio)
                     @if ($estagio['status'] === 'ap')
@@ -55,7 +53,6 @@
                                     <label for="Rejeitar">Rejeitar</label>
                     
                                 </div>
-                                
 
                                 <input  type="hidden" name="id" value="{{ $estagio['_id'] }}">
 
@@ -75,6 +72,4 @@
 
 <script type="text/javascript" src="js/visualizar_solicitacao_preg.js"></script>
 
-
 @endsection
-

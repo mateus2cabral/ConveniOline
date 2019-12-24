@@ -8,22 +8,12 @@
 <div class="visualizar">
 
 <div class="novo-usuario">
-            <a href="cadastro_usuario"><button class="button-novo-usuario">Novo Usuário</button></a>
-        </div>
+    <a href="cadastro_usuario"><button class="button-novo-usuario">Novo Usuário</button></a>
+</div>
 
     <div class="form-title-visualizar">
         Usuários
-
-        
-
     </div>
-
-
-
-<!-- <div class="form-title-visualizar">
-    </div> -->
-
-
 
         <div class="form-fields-visualizar"></div>
 
@@ -34,8 +24,6 @@
                     <th>Usuário</th>
                     <th>E-mail</th>
                     <th>Tipo</th>
-                    <!-- <th>CEP</th>
-                    <th>Ação</th> -->
                 </tr>
                 
                 @foreach ($dados as $dado)
@@ -45,7 +33,6 @@
                         <td>{{ $dado['nome'] }}</td>
                         <td>{{ $dado['usuario'] }}</td>
                         <td>{{ $dado['email'] }}</td>
-
 
                             @if ($dado['tipo'] === 'preg')
                                 <td>PREG</td>
@@ -63,8 +50,6 @@
                 
                 @endforeach
 
-                       
-
             </table>
         
         <div class="end-visualizar"></div>
@@ -74,4 +59,3 @@
 </div>
         
 @endsection
-
