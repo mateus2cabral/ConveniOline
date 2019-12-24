@@ -7,7 +7,7 @@
     <div class="visualizar">
 
         <div class="form-title-visualizar">
-            Frequência ({{$estagiario['nome']}})
+            Frequência ({{$estagiario['nomeAluno']}})
         </div>
 
         
@@ -17,7 +17,7 @@
             <form method="POST" action="salvar_frequencia">
                 {{csrf_field() }}
 
-                <input type="hidden" name="nome_estagiario" value="{{ $estagiario['nome'] }}">
+                <input type="hidden" name="nome_estagiario" value="{{ $estagiario['nomeAluno'] }}">
                 <input type="hidden" name="inicio_semana" value="{{$datas['segunda']}}">
                 <table align="center">
 

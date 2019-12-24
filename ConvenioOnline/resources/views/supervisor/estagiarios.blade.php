@@ -20,15 +20,33 @@
                 <tr>
                     <th>Nome</th>
                     <th>Matrícula</th>
+                    <th>Carga Horária</th>
                     <th>Ação</th>
                 </tr>
+
+                <!-- echo {{$frequencias}} -->
                 
                 @foreach ($estagiarios as $estagiario)
                     <!-- O status da solicitação de convenio pode ser: 'd' -> deferido / 'i' -> indeferido / 'a' -> aguardando -->
-                    @if ($estagiario['rsocialEstagio'] === $usuario['empresa'] && $estagiario['areaEstagio'] === $usuario['area'])
+                    @if ($estagiario['empresa'] === $usuario['empresa'] && $estagiario['area'] === $usuario['area'])
                         <tr align="center">
-                        <td>{{ $estagiario['nome'] }}</td>
-                        <td>{{ $estagiario['matricula'] }}</td>
+                        <td>{{ $estagiario['nomeAluno'] }}</td>
+                        <td>{{ $estagiario['matriculaAluno'] }}</td>
+                        <td>
+
+                            @foreach ($frequencias as $frequencia)
+
+                                @if ($estagiario['nomeAluno'] === $frequencia['estagiario'])
+                                    {{ $frequencia['ch'] }}
+                                @endif
+
+                            @endforeach
+                        
+                        </td>
+
+
+
+
                         <td>
                         <form method="POST" action="aluno_frequencia">
                         {{csrf_field() }}

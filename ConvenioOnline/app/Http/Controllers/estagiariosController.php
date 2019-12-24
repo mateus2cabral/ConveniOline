@@ -10,13 +10,14 @@ class estagiariosController extends Controller
 {
     public function show() {
 
-        $estagiarios = DB::collection('alunos')->get();
+        $estagiarios = DB::collection('estagio')->get();
         $usuarios = DB::collection('logins')->get();
+        $frequencias = DB::collection('frequencia')->get();
 
         foreach ($usuarios as $usuario) {
             if ($usuario['usuario'] === $_SESSION['user']) {
                 // echo $usuario['empresa'];
-                return view('supervisor.estagiarios', compact('estagiarios'), compact('usuario'));
+                return view('supervisor.estagiarios', compact('estagiarios'), compact('usuario', 'frequencias'));
                 
             }
         }
@@ -32,7 +33,7 @@ class estagiariosController extends Controller
 
         // echo $id;    
         
-        $estagiarios = DB::collection('alunos')->get();
+        $estagiarios = DB::collection('estagio')->get();
         $data_atual = new DateTime();
 
         // echo $data_atual->format('m');
@@ -141,6 +142,8 @@ class estagiariosController extends Controller
         $quinta = $frequencia_aluno->quinta;
         $sexta = $frequencia_aluno->sexta;
 
+        $ch = 0;
+
 
 
         $existe_estagiario = false;
@@ -160,7 +163,43 @@ class estagiariosController extends Controller
 
         if ($existe_estagiario) {
             if ($existe_frequencia) {
+
+                if ($segunda == 'on') {
+                    $ch = $ch + 4;
+                }
+                if ($terca == 'on') {
+                    $ch = $ch + 4;
+                }if ($quarta == 'on') {
+                    $ch = $ch + 4;
+                }if ($quinta == 'on') {
+                    $ch = $ch + 4;
+                }if ($sexta == 'on') {
+                    $ch = $ch + 4;
+                }
+
+                DB::collection('frequencia')->where('estagiario', $nome_estagiario)->update(
+                    [
+        
+                        'data_segunda' => $data_segunda,
+                        'segunda' => $segunda,
+        
+                        'data_terca' => $data_terca,
+                        'terca' => $terca,
+        
+                        'data_quarta' => $data_quarta,
+                        'quarta' => $quarta,
+                        
+                        'data_quinta' => $data_quinta,
+                        'quinta' => $quinta,
+        
+                        'data_sexta' => $data_sexta,
+                        'sexta' => $sexta,
+
+                        'ch' => $ch
+                    ]
+                );
                 return redirect ('supervisionar');
+                
             }
             else {
                 
@@ -183,7 +222,9 @@ class estagiariosController extends Controller
                         'quinta' => $quinta,
         
                         'data_sexta' => $data_sexta,
-                        'sexta' => $sexta
+                        'sexta' => $sexta,
+
+                        'ch' => $ch
                     ]
                 );
                 return redirect ('supervisionar');
