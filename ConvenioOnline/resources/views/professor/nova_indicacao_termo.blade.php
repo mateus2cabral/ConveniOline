@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="css/professor/nova_indicacao_termo.css">
 
 <div class="painel" >
-    <!-- Indique um novo aluno <br> para um estágio -->
     <div class="aba_header">
         <div class="aba" >Setor</div>
         <div class="aba" >Empresa</div>
@@ -18,23 +17,24 @@
         </div>
 
         <div class="aba_options" id="active" align="center">
-            Eu, {{ $info[3] }} indico {{ $info[0] }} de matricula {{$info[1]}}
-            para o estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }}
-            na área de {{ $_SESSION["areaEstagio"] }}.
-            
+            Eu, <br>
+            <b>{{ $info[3] }}</b> <br>
+            indico <b>{{ $info[0] }}</b> de matricula {{$info[1]}} <br>
+            para o estágio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} <br>
+            na área de <b>{{ $_SESSION["areaEstagio"] }}</b>.
             
         </div>
+
         <div class="aba_button">
             <form action="confirma_termo" method="post">
             {{csrf_field() }}
                 <input type="hidden" name="termo"
-                value='Eu, {{ $info[3] }} indico {{ $info[0] }} de matricula {{$info[1]}} para o estagio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} na área de {{ $_SESSION["areaEstagio"] }}.'>
+                value='Eu, {{ $info[3] }} indico {{ $info[0] }} de matricula {{$info[1]}} para o estágio supervisionado na empresa {{ $_SESSION["empresaEstagio"] }} na área de {{ $_SESSION["areaEstagio"] }}.'>
 
                 <input class="form-submit" type="submit" value="Confirmar">                                        
             </form>
             <a href="nova_indicacao_alunos2"><button class="form-submit" type="submit">Voltar</button> </a>
         </div>
-       
 
     </div>
     

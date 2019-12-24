@@ -163,6 +163,7 @@ table {
 .modal-content {
     display: inline-block;
     /* background-color: #300e74; */
+    background-color:white;
     width:415px;
     height:225px;
     margin-top: 20px;
@@ -204,10 +205,12 @@ textarea {
 
 .modal-radio label{
     float: left;
+    cursor: pointer;
 }
 
 .justificativa-radio {
     float: left;
+    cursor: pointer;
 }
 
 .justificativa-submit {

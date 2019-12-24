@@ -48,10 +48,10 @@
 
                                 <div class="modal-radio">
 
-                                    <input class="justificativa-radio" type="radio" name="radio" value="Aceitar" required>
+                                    <input class="justificativa-radio" id="Aceitar" type="radio" name="radio" checked value="Aceitar" required>
                                     <label for="Aceitar">Aceitar</label>
 
-                                    <input class="justificativa-radio" type="radio" name="radio" value="Rejeitar" required>
+                                    <input class="justificativa-radio" id="Rejeitar" type="radio" name="radio" value="Rejeitar" required>
                                     <label for="Rejeitar">Rejeitar</label>
                     
                                 </div>

@@ -26,16 +26,16 @@
                     Nome:
                 </div>
                 <div class="form_field_input">
-                    <input type="text" name="nome" required>
+                    <input type="text" name="nome" autofocus minlength="20" required>
                 </div>
             </div>
 
             <div class="form_field-6">
                 <div class="form_field_label">
-                Matriculas:
+                Matricula:
                 </div>
                 <div class="form_field_input">
-                    <input type="text" name="matricula" required>
+                    <input type="text" name="matricula" minlength="7" maxlength="7" required>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@
                 Email:
                 </div>
                 <div class="form_field_input">
-                    <input type="text" name="email" required>
+                    <input type="email" name="email" required>
                 </div>
             </div>
             
