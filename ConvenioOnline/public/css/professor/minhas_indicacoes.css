@@ -95,3 +95,8 @@ table {
 .button-plano:hover{
     cursor: pointer;
 }
+
+.table-row:hover {
+    cursor: pointer;
+    background-color: rgb(247, 254, 255);
+}

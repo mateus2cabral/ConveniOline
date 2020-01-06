@@ -20,6 +20,7 @@
                     <th>Carga Horária</th>
                     <th>Ação</th>
                 </tr>
+
                 
                 @foreach ($estagiarios as $estagiario)
                     @if ($estagiario['empresa'] === $usuario['empresa'] && $estagiario['area'] === $usuario['area'] && $estagiario['status'] === 'a')
@@ -27,14 +28,21 @@
                             <td>{{ $estagiario['nomeAluno'] }}</td>
                             <td>{{ $estagiario['matriculaAluno'] }}</td>
                             <td>
+
+                            @if ($frequencias == '[]')
+                                0h
+                            @else
                             
                                 @foreach ($frequencias as $frequencia)
 
+                                    
+                                
                                     @if ($estagiario['nomeAluno'] === $frequencia['estagiario'])
                                         {{ $frequencia['ch'] }}h
                                     @endif
                                 
                                 @endforeach
+                            @endif
                             
                             </td>
 
