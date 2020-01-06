@@ -79,3 +79,8 @@ table {
     margin: 15px 100px 0px 110px;
     display: block;
 }
+
+.table-row:hover {
+    cursor: pointer;
+    background-color: rgb(247, 254, 255);
+}

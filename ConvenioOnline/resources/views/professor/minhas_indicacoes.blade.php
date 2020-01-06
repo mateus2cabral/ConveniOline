@@ -24,28 +24,31 @@
                         </tr>
                         
                         @foreach ($meusEstagios as $estagio)
-                            <tr align="center">
-                            <td>{{ $estagio['nomeAluno'] }}</td>
-                            <td>{{ $estagio['matriculaAluno'] }}</td>
-                            <td>{{ $estagio['empresa'] }}</td>
-                            <td>{{ $estagio['area'] }}</td>
-                            <td>{{ $estagio['data'] }}</td>
-                            @if ( $estagio['status'] === 'ae')
-                                <td>Aguardando analise da empresa</td>
-                            @endif
-                            @if ( $estagio['status'] === 'ap')
-                                <td>Aguardando analise da PREG</td>
-                            @endif
-                            @if ( $estagio['status'] === 'a')
-                                <td>Aprovado</td>
-                            @endif
-                            @if ( $estagio['status'] === 'rp')
-                                <td>Rejeitado pela PREG</td>
-                            @endif
-                            @if ( $estagio['status'] === 're')
-                                <td>Rejeitado pela empresa</td>
-                            @endif
-                            
+                            <a href="inicio_professor">
+
+                                <tr class="table-row" align="center">
+                                    <td>{{ $estagio['nomeAluno'] }}</td>
+                                    <td>{{ $estagio['matriculaAluno'] }}</td>
+                                    <td>{{ $estagio['empresa'] }}</td>
+                                    <td>{{ $estagio['area'] }}</td>
+                                    <td>{{ $estagio['data'] }}</td>
+                                    @if ( $estagio['status'] === 'ae')
+                                    <td>Aguardando analise da empresa</td>
+                                    @endif
+                                    @if ( $estagio['status'] === 'ap')
+                                    <td>Aguardando analise da PREG</td>
+                                    @endif
+                                    @if ( $estagio['status'] === 'a')
+                                    <td>Aprovado</td>
+                                    @endif
+                                    @if ( $estagio['status'] === 'rp')
+                                    <td>Rejeitado pela PREG</td>
+                                    @endif
+                                    @if ( $estagio['status'] === 're')
+                                    <td>Rejeitado pela empresa</td>
+                                    @endif
+                                </tr>
+                            </a>
                         @endforeach  
                     </table>
                 
