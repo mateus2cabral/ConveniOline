@@ -21,6 +21,8 @@
                             <th>Área</th>
                             <th>Data</th>
                             <th>Status</th>
+                            <th>Plano de estagio</th>
+                            <th>Frequencia</th>
                         </tr>
                         
                         @foreach ($meusEstagios as $estagio)
@@ -45,6 +47,12 @@
                             @if ( $estagio['status'] === 're')
                                 <td>Rejeitado pela empresa</td>
                             @endif
+                        <td>
+                            <a href="plano_estagio"><button class="button-plano">Analisar</button></a>
+                        </td>
+                        <td>
+                            <a><button class="button-plano">Verificar</button>
+                        </td>
                             
                         @endforeach  
                     </table>

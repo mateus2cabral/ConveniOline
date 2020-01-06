@@ -81,6 +81,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('nova_indicacao_alunos2', 'nova_indicacaoController@abaAlunos2')->middleware('checkProfessor');
             Route::post('nova_indicacao_termo', 'nova_indicacaoController@abaTermo')->middleware('checkProfessor');
             Route::post('confirma_termo', 'nova_indicacaoController@confirmaTermo')->middleware('checkProfessor');
+            Route::get('plano_estagio','plano_estagioController@show')->middleware('checkProfessor');
 
 
             
