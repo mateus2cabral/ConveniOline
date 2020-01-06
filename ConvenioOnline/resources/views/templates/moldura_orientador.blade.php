@@ -12,7 +12,7 @@
    <div class="container">
        <header class="h-eader">
             <div class="logo">
-                <a href="https://www.uespi.br/site/"> <img src="image/logo-uespi.png" width="208" height="80"></a>
+                <a href="https://www.uespi.br/site/" target="_blank"> <img src="image/logo-uespi.png" width="208" height="80"></a>
             </div>
             <a href="inicio_orientador">
                 <div class="title">
