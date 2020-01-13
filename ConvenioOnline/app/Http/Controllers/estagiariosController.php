@@ -288,54 +288,11 @@ class estagiariosController extends Controller
 
             return redirect ('supervisionar');
         }
-
-
-
-
-
-
-
-
-        // echo $inicio_semana;
-
-
-        
-        
-
-
-
-        // DB::collection('frequencia')->insert(
-        //     [
-        //         'estagiario' => $nome_estagiario,
-
-        //         'inicio_semana' => $inicio_semana,
-
-        //         'data_segunda' => $data_segunda,
-        //         'segunda' => $segunda,
-
-        //         'data_terca' => $data_terca,
-        //         'terca' => $terca,
-
-        //         'data_quarta' => $data_quarta,
-        //         'quarta' => $quarta,
-                
-        //         'data_quinta' => $data_quinta,
-        //         'quinta' => $quinta,
-
-        //         'data_sexta' => $data_sexta,
-        //         'sexta' => $sexta
-        //     ]
-        // );
-
-
-
-
-
-
-        // return redirect('supervisionar');
     }
 
-
+    public function aluno_plano(Request $estagiario) {
+        return view('supervisor.plano');
+    }
 
 
 

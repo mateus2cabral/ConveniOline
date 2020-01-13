@@ -18,7 +18,6 @@ class minhas_indicacoesController extends Controller
 
             if ($estagio['nomeProfessor'] === $_SESSION["nomeProfessor"]) {
 
-                echo $estagio['nomeProfessor'];
                 array_push($meusEstagios, $estagio);
             }
         }
@@ -29,4 +28,14 @@ class minhas_indicacoesController extends Controller
         return view('professor.minhas_indicacoes', compact('meusEstagios'));
     }
 
+    public function verPlano() {
+
+        return view('professor.plano_estagio_not_found');
+    }
+
+    public function verFrequencia() {
+
+        return view('professor.frequencia_estagio_not_found');
+    }
+    
 }
