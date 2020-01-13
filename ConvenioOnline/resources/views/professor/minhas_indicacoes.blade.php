@@ -16,19 +16,19 @@
 
                         <tr>
                             <th>Aluno</th>
-                            <th>Matricula</th>
+                            <!-- <th>Matricula</th> -->
                             <th>Empresa</th>
                             <th>Área</th>
                             <th>Data</th>
                             <th>Status</th>
-                            <th>Plano de estagio</th>
+                            <th>Plano</th>
                             <th>Frequencia</th>
                         </tr>
                         
                         @foreach ($meusEstagios as $estagio)
                             <tr align="center">
                             <td>{{ $estagio['nomeAluno'] }}</td>
-                            <td>{{ $estagio['matriculaAluno'] }}</td>
+                            <!-- <td>{{ $estagio['matriculaAluno'] }}</td> -->
                             <td>{{ $estagio['empresa'] }}</td>
                             <td>{{ $estagio['area'] }}</td>
                             <td>{{ $estagio['data'] }}</td>
@@ -47,13 +47,13 @@
                             @if ( $estagio['status'] === 're')
                                 <td>Rejeitado pela empresa</td>
                             @endif
-                        <td>
-                            <a href="plano_estagio"><button class="button-plano">Analisar</button></a>
-                        </td>
-                        <td>
-                            <a href="frequencia_estagio"><button class="button-plano">Verificar</button>
-                        </td>
-                            
+                            <td>
+                                <a href="inicio_professor"><button class="button-plano">Analisar</button></a>
+                            </td>
+                            <td>
+                                <a href="inicio_professor"><button class="button-plano">Verificar</button></a>
+                            </td>
+                                
                         @endforeach  
                     </table>
                 

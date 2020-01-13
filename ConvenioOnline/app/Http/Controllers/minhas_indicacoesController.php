@@ -18,6 +18,7 @@ class minhas_indicacoesController extends Controller
 
             if ($estagio['nomeProfessor'] === $_SESSION["nomeProfessor"]) {
 
+                // echo $estagio['nomeProfessor'];
                 array_push($meusEstagios, $estagio);
             }
         }

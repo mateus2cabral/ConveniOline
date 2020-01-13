@@ -80,7 +80,7 @@ table {
     display: block;
 }
 .button-plano{
-    float: right;
+    /* float: left; */
     width: auto;
     height: 40px;
     background-color: rgb(76, 128, 218);
@@ -89,7 +89,7 @@ table {
     color: white;
     font-size: 20px;
     margin-top: 10px;
-    margin-right: 30px;
+    /* margin-right: 30px; */
 }
 
 .button-plano:hover{
