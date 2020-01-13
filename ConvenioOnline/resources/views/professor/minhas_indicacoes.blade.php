@@ -47,13 +47,23 @@
                             @if ( $estagio['status'] === 're')
                                 <td>Rejeitado pela empresa</td>
                             @endif
-                            <td>
-                                <a href="inicio_professor"><button class="button-plano">Analisar</button></a>
+  
+                        <td>
+                                <form method="POST" action="frequencia_estagio">
+                                    {{csrf_field() }}
+                                    <button class="button-frequencia">Modificar</button>
+                                    <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
+                                </form>
                             </td>
+
+                            
                             <td>
-                                <a href="inicio_professor"><button class="button-plano">Verificar</button></a>
+                                <form method="POST" action="plano_estagio">
+                                    {{csrf_field() }}
+                                    <button class="button-frequencia">Gerenciar</button>
+                                    <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
+                                </form>
                             </td>
-                                
                         @endforeach  
                     </table>
                 

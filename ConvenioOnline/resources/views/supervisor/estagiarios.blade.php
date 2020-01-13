@@ -55,7 +55,7 @@
                             <td>
                                 <form method="POST" action="aluno_frequencia">
                                     {{csrf_field() }}
-                                    <button class="button-frequencia">Acessar</button>
+                                    <button class="button-frequencia">Modificar</button>
                                     <input type="hidden" name="id" value="{{ $estagiario['_id'] }}">
                                 </form>
                             </td>
@@ -64,7 +64,7 @@
                             <td>
                                 <form method="POST" action="aluno_plano">
                                     {{csrf_field() }}
-                                    <button class="button-frequencia">Acessar</button>
+                                    <button class="button-frequencia">Gerenciar</button>
                                     <input type="hidden" name="id" value="{{ $estagiario['_id'] }}">
                                 </form>
                             </td>

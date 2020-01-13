@@ -77,8 +77,8 @@ use Illuminate\Support\Facades\Route;
         
         // ABA MINHAS INDICAÇÕES
             Route::get('minhas_indicacoes', 'minhas_indicacoesController@show')->middleware('checkProfessor');
-            Route::get('plano_estagio', 'minhas_indicacoesController@verPlano')->middleware('checkProfessor');
-            Route::get('frequencia_estagio', 'minhas_indicacoesController@verFrequencia')->middleware('checkProfessor');
+            Route::post('plano_estagio', 'minhas_indicacoesController@verPlano')->middleware('checkProfessor');
+            Route::post('frequencia_estagio', 'minhas_indicacoesController@verFrequencia')->middleware('checkProfessor');
 
         // ABA NOVA INDICAÇÃO
             
@@ -99,7 +99,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('inicio_supervisor', 'inicio_supervisorController@show')->middleware('checkSupervisor');
         // ABA  SUPERVISIONAR
             Route::get('supervisionar', 'estagiariosController@show')->middleware('checkSupervisor');
-            
+
             // PLANO DE ESTAGIO
                 Route::post('aluno_plano', 'estagiariosController@aluno_plano')->middleware('checkSupervisor');
 
