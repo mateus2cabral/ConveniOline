@@ -14,9 +14,9 @@ class CreateAtividadesTable extends Migration
     public function up()
     {
         Schema::create('atividades', function (Blueprint $collection) {
-            $collection->string('idAtividade');
             $collection->string('idPlano');
             $collection->string('desc_atividade');
+            $collection->date('data');
         });
     }
 

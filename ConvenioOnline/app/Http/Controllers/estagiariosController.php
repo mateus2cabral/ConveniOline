@@ -290,9 +290,74 @@ class estagiariosController extends Controller
         }
     }
 
-    public function aluno_plano(Request $estagiario) {
-        return view('supervisor.plano');
+    public function aluno_plano(Request $estagioId) {
+        $planos = DB::collection('plano')->get();
+        $planoAtual = null;
+
+        foreach ($planos as $key => $plano) {
+            if ($plano['idEstagio'] == $estagioId->id) {
+                $planoAtual = $plano;
+            }
+        }
+
+        $estagios = DB::collection('estagio')->get();
+        $nomeEstagiario = null;
+
+        foreach ($estagios as $key => $estagio) {
+            if ($estagio['_id'] == $estagioId->id) {
+                $nomeEstagiario = $estagio['nomeAluno'];
+            }
+        }
+
+        $atividades = DB::collection('atividade')->get();
+        $minhasAtividades = [];
+
+        foreach ($atividades as $key => $atividade) {
+            if ($atividade['idPlano'] == $planoAtual['_id']) {
+                array_push($minhasAtividades, $atividade);
+            }
+        }
+
+        return view('supervisor.plano', compact('planoAtual', 'nomeEstagiario', 'minhasAtividades'));
     }
+    
+    public function att_plano (Request $form) {
+        DB::collection('atividade')->insert(
+            ['idPlano' => $form->idPlano,
+            'desc_atividade' => $form->desc,
+            'data' => date('d-m-Y')]
+        );
+        
+        $planos = DB::collection('plano')->get();
+        $planoAtual = null;
+
+        foreach ($planos as $key => $plano) {
+            if ($plano['idEstagio'] == $form->idEstagio) {
+                $planoAtual = $plano;
+            }
+        }
+
+        $estagios = DB::collection('estagio')->get();
+        $nomeEstagiario = null;
+
+        foreach ($estagios as $key => $estagio) {
+            if ($estagio['_id'] == $form->idEstagio) {
+                $nomeEstagiario = $estagio['nomeAluno'];
+            }
+        }
+
+        $atividades = DB::collection('atividade')->get();
+        $minhasAtividades = [];
+
+        foreach ($atividades as $key => $atividade) {
+            if ($atividade['idPlano'] == $planoAtual['_id']) {
+                array_push($minhasAtividades, $atividade);
+            }
+        }
+
+        return view('supervisor.plano', compact('planoAtual', 'nomeEstagiario', 'minhasAtividades'));
+    }
+
 
 
 

@@ -160,6 +160,20 @@ class nova_indicacaoController extends Controller
              'data' => date('d-m-Y')]
         );
 
+        $estagios = DB::collection('estagio')->get();
+        $estagioId = null;
+
+        foreach ($estagios as $key => $estagio) {
+            if ($estagio['matriculaAluno'] == $_SESSION["matAluno"]) {
+                $estagioId = $estagio['_id'];
+            }
+        }
+
+        DB::collection('plano')->insert(
+            ['idEstagio' => $estagioId,
+             'notas' => -1,
+             'status' => "a"] // a=aberto, f=finalizado, ap=aprovado
+        );
 
         return redirect('\inicio_professor');
     }

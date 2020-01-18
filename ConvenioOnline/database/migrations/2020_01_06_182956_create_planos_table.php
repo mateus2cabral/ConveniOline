@@ -14,10 +14,8 @@ class CreatePlanosTable extends Migration
     public function up()
     {
         Schema::create('planos', function (Blueprint $collection) {
-            $collection->string('idPlano');
-            $collection->string('idAluno');
+            $collection->string('idEstagio');
             $collection->integer('notas');
-            $collection->date('data');
             $collection->string('status');
         });
     }

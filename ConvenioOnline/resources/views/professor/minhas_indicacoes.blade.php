@@ -47,23 +47,29 @@
                             @if ( $estagio['status'] === 're')
                                 <td>Rejeitado pela empresa</td>
                             @endif
-  
-                        <td>
-                                <form method="POST" action="frequencia_estagio">
-                                    {{csrf_field() }}
-                                    <button class="button-frequencia">Modificar</button>
-                                    <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
-                                </form>
-                            </td>
 
-                            
-                            <td>
-                                <form method="POST" action="plano_estagio">
-                                    {{csrf_field() }}
-                                    <button class="button-frequencia">Gerenciar</button>
-                                    <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
-                                </form>
-                            </td>
+                            @if ( $estagio['status'] === 'a')
+                                <td>
+                                    <form method="POST" action="frequencia_estagio">
+                                        {{csrf_field() }}
+                                        <button class="button-frequencia">Modificar</button>
+                                        <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
+                                    </form>
+                                </td>
+
+                                
+                                <td>
+                                    <form method="POST" action="plano_estagio">
+                                        {{csrf_field() }}
+                                        <button class="button-frequencia">Gerenciar</button>
+                                        <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
+                                    </form>
+                                </td>
+                            @else 
+                                <td>-</td>
+                                <td>-</td>
+                            @endif
+                               
                         @endforeach  
                     </table>
                 

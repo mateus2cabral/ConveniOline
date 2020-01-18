@@ -102,6 +102,9 @@ use Illuminate\Support\Facades\Route;
 
             // PLANO DE ESTAGIO
                 Route::post('aluno_plano', 'estagiariosController@aluno_plano')->middleware('checkSupervisor');
+                Route::post('att_plano', 'estagiariosController@att_plano')->middleware('checkSupervisor');
+
+                
 
             // FREQUENCIA
                 Route::post('aluno_frequencia', 'estagiariosController@aluno_frequencia')->middleware('checkSupervisor');
