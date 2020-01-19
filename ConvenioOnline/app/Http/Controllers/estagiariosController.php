@@ -358,19 +358,44 @@ class estagiariosController extends Controller
         return view('supervisor.plano', compact('planoAtual', 'nomeEstagiario', 'minhasAtividades'));
     }
 
+    public function att_plano_nota (Request $form) {
+        DB::collection('plano')->where('_id', $form->idPlano)->update(
+            ['notas' => $form->nota,
+             'status' => 'f',
+             'data' => date('d-m-Y')]
+        );
 
 
+        // $planos = DB::collection('plano')->get();
+        // $planoAtual = null;
 
+        // foreach ($planos as $key => $plano) {
+        //     if ($plano['idEstagio'] == $form->idEstagio) {
+        //         $planoAtual = $plano;
+        //     }
+        // }
 
+        // $estagios = DB::collection('estagio')->get();
+        // $nomeEstagiario = null;
 
+        // foreach ($estagios as $key => $estagio) {
+        //     if ($estagio['_id'] == $form->idEstagio) {
+        //         $nomeEstagiario = $estagio['nomeAluno'];
+        //     }
+        // }
 
+        // $atividades = DB::collection('atividade')->get();
+        // $minhasAtividades = [];
 
+        // foreach ($atividades as $key => $atividade) {
+        //     if ($atividade['idPlano'] == $planoAtual['_id']) {
+        //         array_push($minhasAtividades, $atividade);
+        //     }
+        // }
 
-
-
-
-
-
+        // return view('supervisor.plano', compact('planoAtual', 'nomeEstagiario', 'minhasAtividades'));
+        
+        return redirect ('supervisionar');
+    }
     
-
 } // Fim controller
