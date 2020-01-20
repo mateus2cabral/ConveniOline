@@ -29,9 +29,43 @@ class minhas_indicacoesController extends Controller
         return view('professor.minhas_indicacoes', compact('meusEstagios'));
     }
 
-    public function verPlano() {
+    public function verPlano(Request $form) {
+        
+        $planos = DB::collection('plano')->get();
+        $planoAtual = null;
+        $finded = false;
 
-        return view('professor.plano_estagio_not_found');
+        foreach ($planos as $key => $plano) {
+            if ($plano['idEstagio'] == $form->id) {
+                $finded = true;
+                $planoAtual = $plano;
+            }
+        }
+
+        if (!$finded) {
+            return view('professor.plano_estagio_not_found');
+        }
+
+        $estagios = DB::collection('estagio')->get();
+        $nomeEstagiario = null;
+
+        foreach ($estagios as $key => $estagio) {
+            if ($estagio['_id'] == $form->id) {
+                $nomeEstagiario = $estagio['nomeAluno'];
+            }
+        }
+
+        $atividades = DB::collection('atividade')->get();
+        $minhasAtividades = [];
+
+        foreach ($atividades as $key => $atividade) {
+            if ($atividade['idPlano'] == $planoAtual['_id']) {
+                array_push($minhasAtividades, $atividade);
+            }
+        }
+
+        return view('professor.planos_professor', compact('planoAtual', 'nomeEstagiario', 'minhasAtividades'));
+        
     }
 
     public function verFrequencia() {

@@ -50,7 +50,7 @@
 
                             @if ( $estagio['status'] === 'a')
                                 <td>
-                                    <form method="POST" action="frequencia_estagio">
+                                    <form method="POST" action="plano_estagio">
                                         {{csrf_field() }}
                                         <button class="button-frequencia">Modificar</button>
                                         <input type="hidden" name="id" value="{{ $estagio['_id'] }}">
@@ -59,7 +59,7 @@
 
                                 
                                 <td>
-                                    <form method="POST" action="plano_estagio">
+                                    <form method="POST" action="frequencia_estagio">
                                         {{csrf_field() }}
                                         <button class="button-frequencia">Gerenciar</button>
                                         <input type="hidden" name="id" value="{{ $estagio['_id'] }}">

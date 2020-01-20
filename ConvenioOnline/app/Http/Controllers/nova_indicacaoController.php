@@ -138,7 +138,7 @@ class nova_indicacaoController extends Controller
         $logins = DB::collection('logins')->get();
 
         foreach ($logins as $key => $login) {
-            if ($login['usuario'] === $_SESSION["user"]) {
+            if ($login["usuario"] === $_SESSION["user"]) {
                 array_push($info, $login['nome']);
                 $_SESSION["nomeProfessor"] = $login['nome'];
             }
